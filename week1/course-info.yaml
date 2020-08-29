@@ -1,0 +1,10 @@
+title: 'Introduction to Programming '
+language: English
+summary: Assignments for week 1 of the Introduction to Programming Course
+programming_language: Java
+content:
+- First Programming Code
+- Printing
+- Reading Input
+- Variables
+- Calculating with Numbers

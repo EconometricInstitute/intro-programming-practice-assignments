@@ -1,0 +1,3 @@
+Hello, this is your program!
+My presence is only short-lived.
+So I will now say Goodbye!
