@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: src/SpeedingTicket.java
+  visible: true
+  placeholders:
+  - offset: 110
+    length: 230
+    placeholder_text: // Write your code here
+- name: test/SpeedingTicketTest.java
+  visible: false

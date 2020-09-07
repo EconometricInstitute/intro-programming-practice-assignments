@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: test/Tests.java
+  visible: false
+- name: src/Formatted.java
+  visible: true
+  placeholders:
+  - offset: 122
+    length: 158
+    placeholder_text: // Write your code here

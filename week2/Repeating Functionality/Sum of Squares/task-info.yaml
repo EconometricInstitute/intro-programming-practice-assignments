@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: src/SquaresSum.java
+  visible: true
+  placeholders:
+  - offset: 106
+    length: 437
+    placeholder_text: // Write your code here
+- name: test/SquaresSumTest.java
+  visible: false

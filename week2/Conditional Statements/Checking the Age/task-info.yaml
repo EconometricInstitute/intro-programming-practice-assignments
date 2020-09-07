@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: src/AgeChecking.java
+  visible: true
+  placeholders:
+  - offset: 107
+    length: 286
+    placeholder_text: // Write your code here
+- name: test/AgeCheckingTests.java
+  visible: false
