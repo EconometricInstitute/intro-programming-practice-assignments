@@ -10,5 +10,7 @@ public class Multiplication {
         int second = scanner.nextInt();
 
         System.out.println(first + " * " + second + " = " + (first * second));
+        
+        scanner.close();
     }
 }

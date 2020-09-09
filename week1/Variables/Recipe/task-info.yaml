@@ -5,6 +5,6 @@ files:
 - name: src/Recipe.java
   visible: true
   placeholders:
-  - offset: 72
-    length: 55
+  - offset: 73
+    length: 59
     placeholder_text: // Write your solution here

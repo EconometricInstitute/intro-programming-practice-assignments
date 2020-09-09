@@ -10,5 +10,7 @@ public class Sum {
         int second = scanner.nextInt();
 
         System.out.println("The sum of the numbers is " + (first + second));
+
+        scanner.close();
     }
 }

@@ -4,7 +4,7 @@ files:
   visible: true
   placeholders:
   - offset: 110
-    length: 310
+    length: 344
     placeholder_text: // Write your solution here
 - name: test/MultiplicationTest.java
   visible: false

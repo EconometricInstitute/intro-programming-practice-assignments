@@ -12,5 +12,7 @@ public class Average {
         int third = scanner.nextInt();
 
         System.out.println("The average is " + (1.0 * (first + second + third)) / 3);
+        
+        scanner.close();
     }
 }

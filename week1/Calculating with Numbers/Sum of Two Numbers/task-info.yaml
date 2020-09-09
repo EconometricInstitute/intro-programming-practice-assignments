@@ -4,7 +4,7 @@ files:
   visible: true
   placeholders:
   - offset: 99
-    length: 308
+    length: 334
     placeholder_text: // Write your solution here
 - name: test/SumTest.java
   visible: false

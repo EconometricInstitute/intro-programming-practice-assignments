@@ -5,6 +5,6 @@ files:
 - name: src/MultipleLines.java
   visible: true
   placeholders:
-  - offset: 83
-    length: 169
+  - offset: 80
+    length: 175
     placeholder_text: // Write your solution here

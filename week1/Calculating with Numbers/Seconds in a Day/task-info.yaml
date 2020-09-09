@@ -4,7 +4,7 @@ files:
   visible: true
   placeholders:
   - offset: 103
-    length: 270
+    length: 288
     placeholder_text: // Write your solution here
 - name: test/SecondsTest.java
   visible: false
