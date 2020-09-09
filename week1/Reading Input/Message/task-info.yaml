@@ -1,6 +1,10 @@
 type: edu
 files:
-- name: src/Task.java
+- name: src/Message.java
   visible: true
-- name: test/Tests.java
+  placeholders:
+  - offset: 204
+    length: 82
+    placeholder_text: // Write your answer here
+- name: test/MessageTest.java
   visible: false

@@ -7,7 +7,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.PrintStream;
 
-public class Tests {
+public class MessageTest {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
@@ -20,13 +20,21 @@ public class Tests {
         System.setErr(new PrintStream(errContent));
     }
 
+    @Test
     public void testCase1() {
         String input = "Bye";
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
-
-        Task.main(new String[0]);
-        Assert.assertEquals(input + "\n", outContent.toString());
+        
+        Message.main(new String[0]);
+        
+        String output = outContent.toString();
+        Assert.assertTrue(output.startsWith("Write a message:"));
+        
+        output = output.replace("Write a message:", "");
+        output = output.replace(System.lineSeparator(), "");
+        
+        Assert.assertEquals(input, output);
     }
 
     @Test
@@ -35,8 +43,15 @@ public class Tests {
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
 
-        Task.main(new String[0]);
-        Assert.assertEquals(input + "\n", outContent.toString());
+        Message.main(new String[0]);
+
+        String output = outContent.toString();
+        Assert.assertTrue(output.startsWith("Write a message:"));
+
+        output = output.replace("Write a message:", "");
+        output = output.replace(System.lineSeparator(), "");
+
+        Assert.assertEquals(input, output);
     }
 
     @Test
@@ -45,7 +60,14 @@ public class Tests {
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
 
-        Task.main(new String[0]);
-        Assert.assertEquals(input + "\n", outContent.toString());
+        Message.main(new String[0]);
+
+        String output = outContent.toString();
+        Assert.assertTrue(output.startsWith("Write a message:"));
+
+        output = output.replace("Write a message:", "");
+        output = output.replace(System.lineSeparator(), "");
+
+        Assert.assertEquals(input, output);
     }
 }

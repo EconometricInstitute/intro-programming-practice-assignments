@@ -4,3 +4,7 @@ files:
   visible: false
 - name: src/HelloWorld.java
   visible: true
+  placeholders:
+  - offset: 76
+    length: 35
+    placeholder_text: // Code comes here

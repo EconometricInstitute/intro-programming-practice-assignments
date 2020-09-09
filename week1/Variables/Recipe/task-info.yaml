@@ -1,6 +1,10 @@
 type: output
 files:
-- name: src/Main.java
-  visible: true
 - name: test/output.txt
   visible: false
+- name: src/Recipe.java
+  visible: true
+  placeholders:
+  - offset: 72
+    length: 55
+    placeholder_text: // Write your solution here

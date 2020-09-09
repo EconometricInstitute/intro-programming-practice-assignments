@@ -1,6 +1,10 @@
 type: edu
 files:
-- name: src/Task.java
+- name: src/Sum.java
   visible: true
-- name: test/Tests.java
+  placeholders:
+  - offset: 99
+    length: 308
+    placeholder_text: // Write your solution here
+- name: test/SumTest.java
   visible: false
