@@ -1,0 +1,11 @@
+type: edu
+custom_name: 'Elements on the diagonal '
+files:
+- name: src/DiagonalElements.java
+  visible: true
+  placeholders:
+  - offset: 433
+    length: 168
+    placeholder_text: // Write your code here
+- name: test/DiagonalElementsTest.java
+  visible: false

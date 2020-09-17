@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: src/FindingIndex.java
+  visible: true
+  placeholders:
+  - offset: 390
+    length: 536
+    placeholder_text: // Write your code here
+- name: test/FindingIndexTest.java
+  visible: false

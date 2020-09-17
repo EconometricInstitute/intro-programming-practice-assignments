@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: src/NeatPrinting.java
+  visible: true
+  placeholders:
+  - offset: 205
+    length: 152
+    placeholder_text: // Write your code here
+- name: test/NeatPrintingTest.java
+  visible: false
