@@ -1,0 +1,12 @@
+type: edu
+files:
+- name: src/Gauge.java
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 375
+    placeholder_text: // Write your class here
+- name: src/Main.java
+  visible: true
+- name: test/GaugeTest.java
+  visible: false

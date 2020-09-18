@@ -1,0 +1,12 @@
+type: edu
+files:
+- name: src/Agent.java
+  visible: true
+  placeholders:
+  - offset: 421
+    length: 124
+    placeholder_text: // Write the method here
+- name: src/Main.java
+  visible: true
+- name: test/AgentTest.java
+  visible: false

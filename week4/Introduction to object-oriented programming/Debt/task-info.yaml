@@ -1,0 +1,12 @@
+type: edu
+files:
+- name: src/Debt.java
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 412
+    placeholder_text: // Write your class here
+- name: test/DebtTest.java
+  visible: false
+- name: src/Main.java
+  visible: true

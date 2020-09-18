@@ -1,0 +1,16 @@
+type: edu
+files:
+- name: src/Statistics.java
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 530
+    placeholder_text: // Write the class here
+- name: src/Main.java
+  visible: true
+  placeholders:
+  - offset: 100
+    length: 392
+    placeholder_text: // Write code for part 3 here
+- name: test/StatisticsTest.java
+  visible: false
