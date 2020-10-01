@@ -1,0 +1,11 @@
+type: edu
+files:
+- name: src/Summation.java
+  visible: true
+  placeholders:
+  - offset: 249
+    length: 45
+    placeholder_text: "// write your code here \n// remember to include return (at\
+      \ the end)!"
+- name: test/SummationTest.java
+  visible: false

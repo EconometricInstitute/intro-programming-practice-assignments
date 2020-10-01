@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: src/Division.java
+  visible: true
+  placeholders:
+  - offset: 108
+    length: 126
+    placeholder_text: // Add method here
+- name: test/DivisionTest.java
+  visible: false

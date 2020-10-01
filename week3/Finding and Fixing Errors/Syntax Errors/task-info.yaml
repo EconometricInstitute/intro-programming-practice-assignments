@@ -1,0 +1,6 @@
+type: edu
+files:
+- name: src/SyntaxErrors.java
+  visible: true
+- name: test/SyntaxErrorsTest.java
+  visible: false

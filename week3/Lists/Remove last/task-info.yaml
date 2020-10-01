@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: test/RemoveLastTest.java
+  visible: false
+- name: src/RemoveLast.java
+  visible: true
+  placeholders:
+  - offset: 411
+    length: 151
+    placeholder_text: // Add method here

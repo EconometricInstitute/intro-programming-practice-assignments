@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: test/IndexSmallestTest.java
+  visible: false
+- name: src/SmallestIndex.java
+  visible: true
+  placeholders:
+  - offset: 160
+    length: 770
+    placeholder_text: // Add code here

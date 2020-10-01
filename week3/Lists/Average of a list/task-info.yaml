@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: src/ListAverage.java
+  visible: true
+  placeholders:
+  - offset: 442
+    length: 162
+    placeholder_text: // Add code here
+- name: test/ListAverageTest.java
+  visible: false
