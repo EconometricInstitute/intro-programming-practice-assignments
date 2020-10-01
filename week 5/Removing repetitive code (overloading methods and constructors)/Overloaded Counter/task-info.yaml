@@ -1,0 +1,12 @@
+type: edu
+files:
+- name: src/Counter.java
+  visible: true
+- name: test/CounterTest.java
+  visible: false
+- name: src/MainProgram.java
+  visible: true
+  placeholders:
+  - offset: 77
+    length: 27
+    placeholder_text: // You can test your code here

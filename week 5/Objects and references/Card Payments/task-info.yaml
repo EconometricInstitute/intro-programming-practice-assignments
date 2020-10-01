@@ -1,0 +1,51 @@
+type: edu
+files:
+- name: src/PaymentCard.java
+  visible: true
+  placeholders:
+  - offset: 355
+    length: 121
+    placeholder_text: |-
+      // implement the method so that it only takes money from the card if
+       // the balance is at least the amount parameter.
+       // returns true if successful and false otherwise
+- name: src/MainProgram.java
+  visible: true
+  placeholders:
+  - offset: 80
+    length: 472
+    placeholder_text: // You can test your code here
+- name: src/PaymentTerminal.java
+  visible: true
+  placeholders:
+  - offset: 245
+    length: 13
+    placeholder_text: // register initially has 1000 euros of money
+  - offset: 324
+    length: 177
+    placeholder_text: |-
+      // an affordable meal costs 2.50 euros
+       // increase the amount of cash by the price of an affordable mean and return the change
+       // if the payment parameter is not large enough, no meal is sold and the method should return the whole payment
+  - offset: 565
+    length: 173
+    placeholder_text: |-
+      // a hearty meal costs 4.30 euros
+      // increase the amount of cash by the price of a hearty mean and return the change
+        // if the payment parameter is not large enough, no meal is sold and the method should return the whole payment
+  - offset: 807
+    length: 172
+    placeholder_text: |-
+      // an affordable meal costs 2.50 euros
+       // if the payment card has enough money, the balance of the card is decreased by the price, and the method returns true
+       // otherwise false is returned
+  - offset: 1046
+    length: 168
+    placeholder_text: |-
+      // a hearty meal costs 4.30 euros
+      // if the payment card has enough money, the balance of the card is decreased by the price, and the method returns true
+      // otherwise false is returned
+- name: test/TestPaymentCard.java
+  visible: false
+- name: test/TestPaymentTerminal.java
+  visible: false

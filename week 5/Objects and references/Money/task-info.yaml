@@ -1,0 +1,16 @@
+type: edu
+files:
+- name: src/Money.java
+  visible: true
+  placeholders:
+  - offset: 296
+    length: 1180
+    placeholder_text: // Add the methods here
+- name: test/MoneyTest.java
+  visible: false
+- name: src/MainProgram.java
+  visible: true
+  placeholders:
+  - offset: 80
+    length: 22
+    placeholder_text: // You can test your code here

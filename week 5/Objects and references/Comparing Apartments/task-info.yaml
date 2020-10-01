@@ -1,0 +1,16 @@
+type: edu
+files:
+- name: src/Apartment.java
+  visible: true
+  placeholders:
+  - offset: 290
+    length: 526
+    placeholder_text: // Add the methods here
+- name: test/ApartmentTest.java
+  visible: false
+- name: src/MainProgram.java
+  visible: true
+  placeholders:
+  - offset: 80
+    length: 22
+    placeholder_text: // You can test your code here
