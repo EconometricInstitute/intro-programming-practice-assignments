@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: src/Cubes.java
+  visible: true
+  placeholders:
+  - offset: 101
+    length: 334
+    placeholder_text: // Add your code here
+- name: test/CubesTest.java
+  visible: false

@@ -1,0 +1,24 @@
+type: edu
+files:
+- name: src/TodoList.java
+  visible: true
+  placeholders:
+  - offset: 57
+    length: 404
+    placeholder_text: // Add class implementation here
+- name: src/Main.java
+  visible: true
+  placeholders:
+  - offset: 100
+    length: 119
+    placeholder_text: // You can test your code here
+- name: src/UserInterface.java
+  visible: true
+  placeholders:
+  - offset: 60
+    length: 911
+    placeholder_text: // Add class implementation here
+- name: test/TodoListTest.java
+  visible: false
+- name: test/UserInterfaceTest.java
+  visible: false

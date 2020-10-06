@@ -1,0 +1,12 @@
+type: edu
+files:
+- name: src/Calendar.java
+  visible: true
+  placeholders:
+  - offset: 104
+    length: 815
+    placeholder_text: // Add class implementation here
+- name: test/CalendarTest.java
+  visible: false
+- name: src/Main.java
+  visible: true

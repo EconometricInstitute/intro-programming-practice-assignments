@@ -1,0 +1,13 @@
+type: edu
+custom_name: 'MessagingService '
+files:
+- name: src/Message.java
+  visible: true
+- name: src/MessagingService.java
+  visible: true
+  placeholders:
+  - offset: 88
+    length: 328
+    placeholder_text: // Add class implementation here
+- name: test/MessagingServiceTest.java
+  visible: false

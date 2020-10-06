@@ -1,0 +1,14 @@
+type: edu
+files:
+- name: src/RecordsFromFile.java
+  visible: true
+  placeholders:
+  - offset: 167
+    length: 687
+    placeholder_text: // Add your code here
+- name: test/RecordsFromFileTest.java
+  visible: false
+- name: data2.txt
+  visible: false
+- name: recordsData.txt
+  visible: true

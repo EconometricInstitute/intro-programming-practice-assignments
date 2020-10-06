@@ -1,0 +1,12 @@
+type: edu
+files:
+- name: src/SimpleCollection.java
+  visible: true
+  placeholders:
+  - offset: 364
+    length: 450
+    placeholder_text: // Add implementation of method here
+- name: src/Main.java
+  visible: true
+- name: test/SimpleCollectionTest.java
+  visible: false

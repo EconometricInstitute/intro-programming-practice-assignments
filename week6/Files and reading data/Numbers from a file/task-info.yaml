@@ -1,0 +1,14 @@
+type: edu
+files:
+- name: src/NumberFromFile.java
+  visible: true
+  placeholders:
+  - offset: 166
+    length: 807
+    placeholder_text: // Add your code here
+- name: numbers-1.txt
+  visible: true
+- name: numbers-2.txt
+  visible: true
+- name: test/NumbersFromFileTest.java
+  visible: false

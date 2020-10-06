@@ -1,0 +1,26 @@
+type: edu
+files:
+- name: src/Item.java
+  visible: true
+  placeholders:
+  - offset: 24
+    length: 355
+    placeholder_text: // Add class implementation here
+- name: src/Suitcase.java
+  visible: true
+  placeholders:
+  - offset: 76
+    length: 1331
+    placeholder_text: // Add class implementation here
+- name: src/Hold.java
+  visible: true
+  placeholders:
+  - offset: 76
+    length: 609
+    placeholder_text: // Add class implementation here
+- name: test/ItemTest.java
+  visible: false
+- name: test/SuitcaseTest.java
+  visible: false
+- name: test/HoldTest.java
+  visible: false
