@@ -4,7 +4,7 @@ files:
   visible: true
   placeholders:
   - offset: 355
-    length: 121
+    length: 131
     placeholder_text: |-
       // implement the method so that it only takes money from the card if
        // the balance is at least the amount parameter.

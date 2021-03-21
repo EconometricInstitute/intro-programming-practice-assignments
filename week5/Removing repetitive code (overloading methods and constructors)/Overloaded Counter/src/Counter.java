@@ -1,5 +1,4 @@
 public class Counter {
-
     private int value;
 
     public Counter(int startValue) {

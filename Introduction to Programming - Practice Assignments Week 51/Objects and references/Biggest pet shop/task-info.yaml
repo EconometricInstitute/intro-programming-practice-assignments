@@ -1,0 +1,76 @@
+type: edu
+files:
+- name: src/Person.java
+  visible: true
+  placeholders:
+  - offset: 233
+    length: 50
+    placeholder_text: |-
+      // Replace the below return statement
+      return name;
+    initial_state:
+      length: 50
+      offset: 233
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: return this.name + ", has a friend called " + this.pet.getName()
+      + " (" + this.pet.getBreed() + ")";
+  text: |
+    public class Person {
+        private final String name;
+        private final Pet pet;
+
+        public Person(String name, Pet pet) {
+            this.name = name;
+            this.pet = pet;
+        }
+
+        @Override
+        public String toString() {
+            // Replace the below return statement
+    return name;
+        }
+    }
+  learner_created: false
+- name: src/Pet.java
+  visible: true
+  text: "public class Pet {\n    private String name;\n    private String breed;\n\
+    \n    public Pet(String name, String breed) {\n        this.name = name;\n   \
+    \     this.breed = breed;\n    }\n\n    public String getName() {\n        return\
+    \ name;\n    }\n    \n    public String getBreed() {\n        return breed;\n\
+    \    }\n}\n"
+  learner_created: false
+- name: test/PersonTest.java
+  visible: false
+  text: |
+    import org.junit.Assert;
+    import org.junit.Test;
+
+    public class PersonTest {
+        @Test
+        public void testToString() {
+            Pet lucy = new Pet("Lucy", "golden retriever");
+            Person leo = new Person("Leo", lucy);
+            Assert.assertEquals("Leo, has a friend called Lucy (golden retriever)", leo.toString());
+
+            Pet dominic = new Pet("Dominic", "Siberian cat");
+            Person ian = new Person("Ian", dominic);
+            Assert.assertEquals("Ian, has a friend called Dominic (Siberian cat)", ian.toString());
+        }
+    }
+  learner_created: false
+- name: src/MainProgram.java
+  visible: true
+  text: |
+    public class MainProgram {
+        public static void main(String[] args) {
+            Pet lucy = new Pet("Lucy", "golden retriever");
+            Person leo = new Person("Leo", lucy);
+
+            System.out.println(leo);
+        }
+    }
+  learner_created: false
+status: Unchecked
+record: -1

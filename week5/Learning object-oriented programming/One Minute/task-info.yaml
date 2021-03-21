@@ -5,9 +5,9 @@ files:
 - name: src/Timer.java
   visible: true
   placeholders:
-  - offset: 23
-    length: 446
-    placeholder_text: // Add class implementation here
+  - offset: 21
+    length: 483
+    placeholder_text: // Implement your own class here
 - name: test/TimerTest.java
   visible: false
 - name: src/MainProgram.java

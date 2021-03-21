@@ -4,9 +4,9 @@ files:
   visible: true
   placeholders:
   - offset: 233
-    length: 85
+    length: 100
     placeholder_text: |-
-      // Replace the below method
+      // Replace the below return statement
       return name;
 - name: src/Pet.java
   visible: true

@@ -1,0 +1,246 @@
+type: edu
+files:
+- name: src/PaymentCard.java
+  visible: true
+  placeholders:
+  - offset: 355
+    length: 169
+    placeholder_text: |-
+      // implement the method so that it only takes money from the card if
+       // the balance is at least the amount parameter.
+       // returns true if successful and false otherwise
+    initial_state:
+      length: 169
+      offset: 355
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      if (balance >= amount) {
+                  this.balance = this.balance - amount;
+                  return true;
+              }
+              return false;
+  text: |
+    public class PaymentCard {
+        private double balance;
+
+        public PaymentCard(double balance) {
+            this.balance = balance;
+        }
+
+        public double balance() {
+            return this.balance;
+        }
+
+        public void addMoney(double increase) {
+            this.balance = this.balance + increase;
+        }
+
+        public boolean takeMoney(double amount) {
+            // implement the method so that it only takes money from the card if
+     // the balance is at least the amount parameter.
+     // returns true if successful and false otherwise
+        }
+    }
+  learner_created: false
+- name: src/MainProgram.java
+  visible: true
+  placeholders:
+  - offset: 80
+    length: 30
+    placeholder_text: // You can test your code here
+    initial_state:
+      length: 30
+      offset: 80
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      PaymentCard petesCard = new PaymentCard(10);
+
+              System.out.println("money " + petesCard.balance());
+              boolean wasSuccessful = petesCard.takeMoney(8);
+              System.out.println("successfully withdrew: " + wasSuccessful);
+              System.out.println("money " + petesCard.balance());
+
+              wasSuccessful = petesCard.takeMoney(4);
+              System.out.println("successfully withdrew: " + wasSuccessful);
+              System.out.println("money " + petesCard.balance());
+  text: |
+    public class MainProgram {
+        public static void main(String[] args) {
+            // You can test your code here
+        }
+    }
+  learner_created: false
+- name: src/PaymentTerminal.java
+  visible: true
+  placeholders:
+  - offset: 245
+    length: 45
+    placeholder_text: // register initially has 1000 euros of money
+    initial_state:
+      length: 45
+      offset: 245
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: money = 1000;
+  - offset: 356
+    length: 240
+    placeholder_text: |-
+      // an affordable meal costs 2.50 euros
+       // increase the amount of cash by the price of an affordable mean and return the change
+       // if the payment parameter is not large enough, no meal is sold and the method should return the whole payment
+    initial_state:
+      length: 240
+      offset: 356
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: "if (payment >= 2.50) {\n            this.affordableMeals++;\n\
+      \            money = money + 2.50;\n            return payment - 2.50;\n   \
+      \     } else {\n            return payment;\n    "
+  - offset: 660
+    length: 230
+    placeholder_text: |-
+      // a hearty meal costs 4.30 euros
+      // increase the amount of cash by the price of a hearty mean and return the change
+        // if the payment parameter is not large enough, no meal is sold and the method should return the whole payment
+    initial_state:
+      length: 230
+      offset: 660
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |2-
+           if (payment >= 4.30) {
+                  this.heartyMeals++;
+                  this.money = this.money + 4.30;
+                  return payment - 4.30;
+              } else {
+                  retur
+  - offset: 959
+    length: 191
+    placeholder_text: |-
+      // an affordable meal costs 2.50 euros
+       // if the payment card has enough money, the balance of the card is decreased by the price, and the method returns true
+       // otherwise false is returned
+    initial_state:
+      length: 191
+      offset: 959
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: "ard card) {\n        if (card.balance() >= 2.50) {\n\
+      \            this.affordableMeals++;\n            card.takeMoney(2.50);\n  \
+      \          return true;\n        } else {\n          "
+  - offset: 1217
+    length: 184
+    placeholder_text: |-
+      // a hearty meal costs 4.30 euros
+      // if the payment card has enough money, the balance of the card is decreased by the price, and the method returns true
+      // otherwise false is returned
+    initial_state:
+      length: 184
+      offset: 1217
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: "mentCard card) {\n        if (card.balance() >= 4.30)\
+      \ {\n            this.heartyMeals++;\n            card.takeMoney(4.30);\n  \
+      \          return true;\n        } else {\n     "
+  text: |
+    public class PaymentTerminal {
+        private double money;  // amount of cash
+        private int affordableMeals; // number of sold affordable meals
+        private int heartyMeals;  // number of sold hearty meals
+
+        public PaymentTerminal() {
+            // register initially has 1000 euros of money
+        }
+
+        public double eatAffordably(double payment) {
+            // an affordable meal costs 2.50 euros
+     // increase the amount of cash by the price of an affordable mean and return the change
+     // if the payment parameter is not large enough, no meal is sold and the method should return the whole payment    }
+        }
+
+        public double eatHeartily(double payment) {
+       // a hearty meal costs 4.30 euros
+    // increase the amount of cash by the price of a hearty mean and return the change
+      // if the payment parameter is not large enough, no meal is sold and the method should return the whole paymentn payment;
+            }
+        }
+
+        public boolean eatAffordably(PaymentC// an affordable meal costs 2.50 euros
+     // if the payment card has enough money, the balance of the card is decreased by the price, and the method returns true
+     // otherwise false is returned  return false;
+            }
+        }
+
+        public boolean eatHeartily(Pay// a hearty meal costs 4.30 euros
+    // if the payment card has enough money, the balance of the card is decreased by the price, and the method returns true
+    // otherwise false is returned       return false;
+            }
+        }
+
+        public String toString() {
+            return "money: " + this.money + ", number of sold affordable meals: " + this.affordableMeals +
+                    ", number of sold hearty meals: " + this.heartyMeals;
+        }
+    }
+  learner_created: false
+- name: test/TestPaymentCard.java
+  visible: false
+  text: "import org.junit.Assert;\nimport org.junit.Test;\n\npublic class TestPaymentCard\
+    \ {\n    @Test\n    public void testConstructor() {\n        PaymentCard card\
+    \ = new PaymentCard(15.0);\n        \n        Assert.assertEquals(15.0, card.balance(),\
+    \ 0.01);\n    }\n    \n    @Test\n    public void testWithdraw() {\n        PaymentCard\
+    \ card = new PaymentCard(15.0);\n            \n        Assert.assertTrue(card.takeMoney(5.0));\n\
+    \        Assert.assertEquals(10.0, card.balance(), 0.01);\n        \n        Assert.assertFalse(card.takeMoney(11.0));\n\
+    \        Assert.assertEquals(10.0, card.balance(), 0.01);\n    }\n    \n}\n"
+  learner_created: false
+- name: test/TestPaymentTerminal.java
+  visible: false
+  text: "import org.junit.Assert;\nimport org.junit.Test;\n\npublic class TestPaymentTerminal\
+    \ {\n\n    @Test\n    public void testConstructor() {\n        PaymentTerminal\
+    \ terminal = new PaymentTerminal();\n\n        Assert.assertEquals(\"money: 1000.0,\
+    \ number of sold affordable meals: 0, number of sold hearty meals: 0\",\n    \
+    \            terminal.toString());\n    }\n\n    @Test\n    public void testAffordable()\
+    \ {\n        PaymentTerminal paymentTerminal = new PaymentTerminal();\n\n    \
+    \    Assert.assertEquals(0, paymentTerminal.eatAffordably(2.50), 0.01);\n    \
+    \    Assert.assertEquals(\"money: 1002.5, number of sold affordable meals: 1,\
+    \ number of sold hearty meals: 0\",\n                paymentTerminal.toString());\n\
+    \        \n        Assert.assertEquals(2.20, paymentTerminal.eatAffordably(2.20),\
+    \ 0.01);\n        Assert.assertEquals(\"money: 1002.5, number of sold affordable\
+    \ meals: 1, number of sold hearty meals: 0\",\n                paymentTerminal.toString());\n\
+    \n        Assert.assertEquals(0.20, paymentTerminal.eatAffordably(2.70), 0.01);\n\
+    \        Assert.assertEquals(\"money: 1005.0, number of sold affordable meals:\
+    \ 2, number of sold hearty meals: 0\",\n                paymentTerminal.toString());\n\
+    \    }\n    \n    @Test\n    public void testHeartily() {\n        PaymentTerminal\
+    \ paymentTerminal = new PaymentTerminal();\n\n        Assert.assertEquals(0, paymentTerminal.eatHeartily(4.30),\
+    \ 0.01);\n        Assert.assertEquals(\"money: 1004.3, number of sold affordable\
+    \ meals: 0, number of sold hearty meals: 1\",\n                paymentTerminal.toString());\n\
+    \n        Assert.assertEquals(2.20, paymentTerminal.eatHeartily(2.20), 0.01);\n\
+    \        Assert.assertEquals(\"money: 1004.3, number of sold affordable meals:\
+    \ 0, number of sold hearty meals: 1\",\n                paymentTerminal.toString());\n\
+    \n        Assert.assertEquals(0.20, paymentTerminal.eatHeartily(4.50), 0.01);\n\
+    \    }\n    \n    @Test\n    public void testCardPayments() {\n        PaymentTerminal\
+    \ paymentTerminal = new PaymentTerminal();\n        PaymentCard card = new PaymentCard(15.0);\n\
+    \        \n        Assert.assertTrue(paymentTerminal.eatAffordably(card));\n \
+    \       Assert.assertEquals(12.50,card.balance(),0.01);\n        Assert.assertEquals(\"\
+    money: 1000.0, number of sold affordable meals: 1, number of sold hearty meals:\
+    \ 0\",\n                paymentTerminal.toString());\n        \n        card =\
+    \ new PaymentCard(4);\n        Assert.assertFalse(paymentTerminal.eatHeartily(card));\n\
+    \        Assert.assertEquals(4, card.balance(), 0.01);\n        Assert.assertEquals(\"\
+    money: 1000.0, number of sold affordable meals: 1, number of sold hearty meals:\
+    \ 0\",\n                paymentTerminal.toString());\n        \n        card =\
+    \ new PaymentCard(12);\n        Assert.assertTrue(paymentTerminal.eatHeartily(card));\n\
+    \        Assert.assertEquals(7.70, card.balance(), 0.01);\n        Assert.assertEquals(\"\
+    money: 1000.0, number of sold affordable meals: 1, number of sold hearty meals:\
+    \ 1\",\n                paymentTerminal.toString());\n\n    }\n}\n"
+  learner_created: false
+status: Unchecked
+record: -1

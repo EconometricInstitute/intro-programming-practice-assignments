@@ -3,8 +3,8 @@ files:
 - name: src/Book.java
   visible: true
   placeholders:
-  - offset: 24
-    length: 528
+  - offset: 20
+    length: 562
     placeholder_text: // Add class implementation here
 - name: test/BookTest.java
   visible: false

@@ -6,7 +6,7 @@ files:
   visible: true
   placeholders:
   - offset: 152
-    length: 451
+    length: 457
     placeholder_text: // Add your code here
 - name: test/ItemsTest.java
   visible: false

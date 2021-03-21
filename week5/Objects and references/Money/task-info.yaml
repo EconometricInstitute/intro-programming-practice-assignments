@@ -3,8 +3,8 @@ files:
 - name: src/Money.java
   visible: true
   placeholders:
-  - offset: 296
-    length: 1180
+  - offset: 292
+    length: 1144
     placeholder_text: // Add the methods here
 - name: test/MoneyTest.java
   visible: false

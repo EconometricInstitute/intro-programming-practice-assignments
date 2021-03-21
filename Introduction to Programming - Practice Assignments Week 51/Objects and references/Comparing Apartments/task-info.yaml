@@ -1,0 +1,84 @@
+type: edu
+files:
+- name: src/Apartment.java
+  visible: true
+  placeholders:
+  - offset: 290
+    length: 23
+    placeholder_text: // Add the methods here
+    initial_state:
+      length: 23
+      offset: 290
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      public boolean largerThan(Apartment compared) {
+              if (squares > compared.squares) {
+                  return true;
+              } else {
+                  return false;
+              }
+          }
+
+          public int priceDifference(Apartment compared) {
+              if (pricePerSquare * squares >= compared.pricePerSquare * compared.squares) {
+                  return pricePerSquare * squares - compared.pricePerSquare * compared.squares;
+              } else {
+                  return compared.pricePerSquare * compared.squares - pricePerSquare * squares;
+              }
+          }
+  text: |
+    public class Apartment {
+        private int rooms;
+        private int squares;
+        private int pricePerSquare;
+
+        public Apartment(int rooms, int squares, int pricePerSquare) {
+            this.rooms = rooms;
+            this.squares = squares;
+            this.pricePerSquare = pricePerSquare;
+        }
+
+        // Add the methods here
+    }
+  learner_created: false
+- name: test/ApartmentTest.java
+  visible: false
+  text: "import org.junit.Assert;\nimport org.junit.Test;\n\npublic class ApartmentTest\
+    \ {\n    @Test\n    public void testConstructor() {\n        Apartment apartment\
+    \ = new Apartment(1, 10, 5500);\n    }\n    \n    @Test\n    public void testComparison()\
+    \ {\n        Apartment apartment = new Apartment(1, 10, 5500);\n        Apartment\
+    \ otherApartment = new Apartment(1, 25, 6000);\n        \n        Assert.assertTrue(otherApartment.largerThan(apartment));\n\
+    \        Assert.assertFalse(apartment.largerThan(otherApartment));\n\n       \
+    \ Apartment thirdApartment = new Apartment(1, 35, 6000);\n        Assert.assertTrue(thirdApartment.largerThan(apartment));\n\
+    \        Assert.assertTrue(thirdApartment.largerThan(otherApartment));\n    }\n\
+    \    \n    @Test\n    public void testPriceDifference() {\n        Apartment apartment\
+    \ = new Apartment(1, 10, 5500);\n        Apartment otherApartment = new Apartment(1,\
+    \ 25, 6000);\n        \n        Assert.assertEquals(95000, otherApartment.priceDifference(apartment));\n\
+    \        Assert.assertEquals(95000, apartment.priceDifference(otherApartment));\n\
+    \n        Apartment thirdApartment = new Apartment(1, 35, 6000);\n        Assert.assertEquals(60000,\
+    \ thirdApartment.priceDifference(otherApartment));\n    }\n}\n"
+  learner_created: false
+- name: src/MainProgram.java
+  visible: true
+  placeholders:
+  - offset: 80
+    length: 30
+    placeholder_text: // You can test your code here
+    initial_state:
+      length: 30
+      offset: 80
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: // Test your code here
+  text: |
+    public class MainProgram {
+        public static void main(String[] args) {
+            // You can test your code here
+        }
+    }
+  learner_created: false
+status: Unchecked
+record: -1
