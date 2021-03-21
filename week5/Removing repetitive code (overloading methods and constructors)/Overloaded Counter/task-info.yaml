@@ -2,6 +2,10 @@ type: edu
 files:
 - name: src/Counter.java
   visible: true
+  placeholders:
+  - offset: 28
+    length: 570
+    placeholder_text: // Write your implementation of the class here
 - name: test/CounterTest.java
   visible: false
 - name: src/MainProgram.java
