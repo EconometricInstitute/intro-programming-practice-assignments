@@ -10,19 +10,19 @@ public class Book {
     }
 
     public String getAuthor() {
-        return author;
+        return this.author;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public int getPages() {
-        return pages;
+        return this.pages;
     }
 
     @Override
     public String toString() {
-        return author + ", " + name + ", " + pages + " pages";
+        return this.author + ", " + this.name + ", " + this.pages + " pages";
     }
 }

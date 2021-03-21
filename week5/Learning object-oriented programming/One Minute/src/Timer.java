@@ -3,18 +3,18 @@ public class Timer {
     private ClockHand secondsClock;
 
     public Timer() {
-        hundredsClock = new ClockHand(100);
-        secondsClock = new ClockHand(60);
+        this.hundredsClock = new ClockHand(100);
+        this.secondsClock = new ClockHand(60);
     }
 
     public void advance() {
-        if (hundredsClock.value() == 99) {
-            secondsClock.advance();
+        if (this.hundredsClock.value() == 99) {
+            this.secondsClock.advance();
         }
-        hundredsClock.advance();
+        this.hundredsClock.advance();
     }
 
     public String toString() {
-        return secondsClock.value() + ":" + hundredsClock.value();
+        return this.secondsClock.value() + ":" + this.hundredsClock.value();
     }
 }

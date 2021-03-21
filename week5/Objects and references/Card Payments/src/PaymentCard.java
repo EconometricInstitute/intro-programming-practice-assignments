@@ -15,7 +15,7 @@ public class PaymentCard {
 
     public boolean takeMoney(double amount) {
         if (balance >= amount) {
-            balance = balance - amount;
+            this.balance = this.balance - amount;
             return true;
         }
         return false;

@@ -9,6 +9,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return name + ", has a friend called " + pet.getName() + " (" + pet.getBreed() + ")";
+        return this.name + ", has a friend called " + this.pet.getName() + " (" + this.pet.getBreed() + ")";
     }
 }
