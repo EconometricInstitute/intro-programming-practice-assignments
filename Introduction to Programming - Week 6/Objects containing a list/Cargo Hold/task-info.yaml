@@ -1,0 +1,202 @@
+type: edu
+files:
+- name: src/Item.java
+  visible: true
+  placeholders:
+  - offset: 24
+    length: 32
+    placeholder_text: // Add class implementation here
+    initial_state:
+      length: 32
+      offset: 24
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: "private String name;\n    private int weight;\n\n\
+      \    public Item(String name, int weight) {\n        this.name = name;\n   \
+      \     this.weight = weight;\n    }\n    \n    public String getName() {\n  \
+      \      return name;\n    }\n\n    public int getWeight() {\n        return weight;\n\
+      \    }\n\n    public String toString() {\n        return name + \" (\" + weight\
+      \ + \" kg)\";\n    }"
+  text: |
+    public class Item {
+        // Add class implementation here
+    }
+  learner_created: false
+- name: src/Suitcase.java
+  visible: true
+  placeholders:
+  - offset: 76
+    length: 32
+    placeholder_text: // Add class implementation here
+    initial_state:
+      length: 32
+      offset: 76
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: "    private int maximumWeight;\n    private int currentWeight;\n\
+      \    private List<Item> items;\n    \n    public Suitcase(int maximumWeight)\
+      \ {\n        this.maximumWeight = maximumWeight;\n        this.currentWeight\
+      \ = 0; \n        items = new ArrayList<>();\n    }\n\n    public void addItem(Item\
+      \ item) {\n        if (currentWeight + item.getWeight() <= maximumWeight) {\n\
+      \            items.add(item);\n            currentWeight = currentWeight + item.getWeight();\n\
+      \        }\n    }\n\n    public String toString() {\n        if (items.isEmpty())\
+      \ {\n            return \"no items (0 kg)\";\n        } else if (items.size()\
+      \ == 1) {\n            return \"1 item (\" + currentWeight + \" kg)\";\n   \
+      \     } else {\n            return items.size() + \" items (\" + currentWeight\
+      \ + \" kg)\";\n        }\n    }\n    \n    public void printItems() {\n    \
+      \    for (Item item : items) {\n            System.out.println(item);\n    \
+      \    }\n    }\n    \n    public int totalWeight() {\n        return currentWeight;\n\
+      \    }\n    \n    public Item heaviestItem() {\n        Item maximumWeightItem\
+      \ = null;\n        int maximumWeight = -1;\n        \n        for (Item item\
+      \ : items) {\n            if (item.getWeight() > maximumWeight) {\n        \
+      \        maximumWeightItem = item;\n                maximumWeight = item.getWeight();\n\
+      \            }\n        }\n        \n        return maximumWeightItem;\n   \
+      \ }"
+  text: |
+    import java.util.ArrayList;
+    import java.util.List;
+
+    public class Suitcase {
+    // Add class implementation here
+    }
+  learner_created: false
+- name: src/Hold.java
+  visible: true
+  placeholders:
+  - offset: 76
+    length: 32
+    placeholder_text: // Add class implementation here
+    initial_state:
+      length: 32
+      offset: 76
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      private int maximumWeight;
+          private int currentWeight;
+          private List<Suitcase> suitcases;
+
+          public Hold(int maximumWeight) {
+              this.maximumWeight = maximumWeight;
+              this.currentWeight = 0;
+              suitcases = new ArrayList<>();
+          }
+
+          public void addSuitcase(Suitcase suitcase) {
+              if (currentWeight + suitcase.totalWeight() <= maximumWeight) {
+                  suitcases.add(suitcase);
+                  currentWeight = currentWeight + suitcase.totalWeight();
+              }
+          }
+
+          public String toString() {
+              return suitcases.size() + " suitcases (" + currentWeight + " kg)";
+          }
+  text: |
+    import java.util.ArrayList;
+    import java.util.List;
+
+    public class Hold {
+        // Add class implementation here
+    }
+  learner_created: false
+- name: test/ItemTest.java
+  visible: false
+  text: |
+    import org.junit.Assert;
+    import org.junit.Test;
+
+    public class ItemTest {
+        @Test
+        public void testConstructor() {
+            Item item = new Item("Shirt", 4);
+            Assert.assertEquals("Shirt", item.getName());
+            Assert.assertEquals(4, item.getWeight());
+            Assert.assertEquals("Shirt (4 kg)", item.toString());
+        }
+    }
+  learner_created: false
+- name: test/SuitcaseTest.java
+  visible: false
+  text: "import org.junit.Assert;\nimport org.junit.Test;\n\npublic class SuitcaseTest\
+    \ {\n    \n    @Test\n    public void testConstructor() {\n        Suitcase suitcase\
+    \ = new Suitcase(12);\n\n        Assert.assertEquals(0, suitcase.totalWeight());\n\
+    \    }\n    \n    @Test\n    public void testNullHeaviestItem() {\n        Suitcase\
+    \ suitcase = new Suitcase(13);\n        \n        Assert.assertNull(suitcase.heaviestItem());\n\
+    \        Assert.assertEquals(\"no items (0 kg)\", suitcase.toString());\n    }\n\
+    \    \n    @Test\n    public void testAddition() {\n        Suitcase suitcase\
+    \ = new Suitcase(12);\n        \n        suitcase.addItem(new Item(\"Shirt\",\
+    \ 1));\n        Assert.assertEquals(1, suitcase.totalWeight());\n        \n  \
+    \      suitcase.addItem(new Item(\"Shoes\", 5));\n        Assert.assertEquals(6,\
+    \ suitcase.totalWeight());\n        \n        suitcase.addItem(new Item(\"Wallet\"\
+    , 1));\n        Assert.assertEquals(7, suitcase.totalWeight());\n        \n  \
+    \      Assert.assertEquals(\"3 items (7 kg)\", suitcase.toString());\n    }\n\
+    \    \n    @Test\n    public void testWeightRestriction() {\n        Suitcase\
+    \ suitcase = new Suitcase(5);\n\n        suitcase.addItem(new Item(\"Shirt\",\
+    \ 1));\n        Assert.assertEquals(1, suitcase.totalWeight());\n        \n  \
+    \      suitcase.addItem(new Item(\"Shoes\", 5));\n        Assert.assertEquals(1,\
+    \ suitcase.totalWeight());\n        \n        Assert.assertEquals(\"1 item (1\
+    \ kg)\", suitcase.toString());\n    }\n\n    @Test\n    public void testHeaviest()\
+    \ {\n        Suitcase suitcase = new Suitcase(12);\n\n        Item shoes = new\
+    \ Item(\"Shoes\", 5);\n        \n        suitcase.addItem(new Item(\"Shirt\",\
+    \ 1));\n        suitcase.addItem(shoes);\n        suitcase.addItem(new Item(\"\
+    Wallet\", 1));\n        suitcase.addItem(new Item(\"Camera\", 4));\n\n       \
+    \ Assert.assertEquals(shoes, suitcase.heaviestItem());\n    }\n}\n"
+  learner_created: false
+- name: test/HoldTest.java
+  visible: false
+  text: |
+    import org.junit.Assert;
+    import org.junit.Test;
+
+    public class HoldTest {
+        public void testConstructor() {
+            Hold hold = new Hold(10);
+
+            Assert.assertEquals("0 suitcases (0 kg)", hold.toString());
+        }
+
+        @Test
+        public void testAdd() {
+            Hold hold = new Hold(10);
+
+            Suitcase firstCase = new Suitcase(5);
+            firstCase.addItem(new Item("Shoes", 2));
+            firstCase.addItem(new Item("Shirt", 1));
+
+            Suitcase secondCase = new Suitcase(7);
+            secondCase.addItem(new Item("Shoes", 2));
+            secondCase.addItem(new Item("Shirt", 1));
+            secondCase.addItem(new Item("Camera", 4));
+
+            hold.addSuitcase(firstCase);
+            hold.addSuitcase(secondCase);
+
+            Assert.assertEquals("2 suitcases (10 kg)", hold.toString());
+        }
+
+        @Test
+        public void testWeightRestriction() {
+            Hold hold = new Hold(10);
+
+            Suitcase firstCase = new Suitcase(5);
+            firstCase.addItem(new Item("Shoes", 2));
+            firstCase.addItem(new Item("Shirt", 2));
+
+            Suitcase secondCase = new Suitcase(7);
+            secondCase.addItem(new Item("Shoes", 2));
+            secondCase.addItem(new Item("Shirt", 1));
+            secondCase.addItem(new Item("Camera", 4));
+
+            hold.addSuitcase(firstCase);
+            hold.addSuitcase(secondCase);
+
+            Assert.assertEquals("1 suitcases (4 kg)", hold.toString());
+        }
+    }
+  learner_created: false
+status: Unchecked
+record: -1

@@ -1,0 +1,63 @@
+type: edu
+custom_name: 'MessagingService '
+files:
+- name: src/Message.java
+  visible: true
+  text: "import java.util.Objects;\n\npublic class Message {\n    private final String\
+    \ sender;\n    private final String content;\n\n    public Message(String sender,\
+    \ String content) {\n        this.sender = sender;\n        this.content = content;\n\
+    \    }\n\n    public String getSender() {\n        return sender;\n    }\n\n \
+    \   public String getContent() {\n        return content;\n    }\n\n    @Override\n\
+    \    public boolean equals(Object other) {\n        if (this == other) {\n   \
+    \         return true;\n        }\n\n        if (other == null || getClass() !=\
+    \ other.getClass()) {\n            return false;\n        }\n\n        Message\
+    \ message = (Message) other;\n        return Objects.equals(sender, message.sender)\
+    \ && Objects.equals(content, message.content);\n    }\n    \n}\n"
+  learner_created: false
+- name: src/MessagingService.java
+  visible: true
+  placeholders:
+  - offset: 88
+    length: 32
+    placeholder_text: // Add class implementation here
+    initial_state:
+      length: 32
+      offset: 88
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: "private List<Message> messages;\n\n    public MessagingService()\
+      \ {\n        messages = new ArrayList<>();\n    }\n    \n    public void add(Message\
+      \ message) {\n        if (message.getContent().length() <= 280) {\n        \
+      \    messages.add(message);\n        }\n    }\n\n    public List<Message> getMessages()\
+      \ {\n        return messages;\n    }"
+  text: |
+    import java.util.ArrayList;
+    import java.util.List;
+
+    public class MessagingService {
+        // Add class implementation here
+    }
+  learner_created: false
+- name: test/MessagingServiceTest.java
+  visible: false
+  text: "import org.junit.Assert;\nimport org.junit.Test;\n\nimport java.util.List;\n\
+    \npublic class MessagingServiceTest {\n    @Test\n    public void testConstructor()\
+    \ {\n        MessagingService service = new MessagingService();\n\n        Assert.assertEquals(List.of(),\
+    \ service.getMessages());\n    }\n\n    @Test\n    public void testAdd() {\n \
+    \       MessagingService service = new MessagingService();\n\n        Message\
+    \ firstMessage = new Message(\"John\", \"Hello\");\n        Message secondMessage\
+    \ = new Message(\"Jane\", \"Hello again\");\n\n        service.add(firstMessage);\n\
+    \        service.add(secondMessage);\n\n        Assert.assertEquals(List.of(firstMessage,\
+    \ secondMessage), service.getMessages());\n    }\n\n    @Test\n    public void\
+    \ testLongMessageRejection() {\n        MessagingService service = new MessagingService();\n\
+    \        \n        Message message = new Message(\"John\", \"This is a message\
+    \ with a very long story that should be rejected. The \" +\n                \"\
+    message is so long because many additional words are used that do not have any\
+    \ direct meaning. \" +\n                \"However, these are just added to reach\
+    \ the required number of characters. Otherwise, the message \" +\n           \
+    \     \"would still be so short to be accepted.\");\n        service.add(message);\n\
+    \n        Assert.assertEquals(0, service.getMessages().size());\n    }\n}\n"
+  learner_created: false
+status: Unchecked
+record: -1

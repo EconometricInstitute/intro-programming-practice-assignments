@@ -1,0 +1,111 @@
+type: edu
+files:
+- name: src/SimpleCollection.java
+  visible: true
+  placeholders:
+  - offset: 364
+    length: 36
+    placeholder_text: // Add implementation of method here
+    initial_state:
+      length: 36
+      offset: 364
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      String string = "The collection " + name;
+              if (values.isEmpty()) {
+                  string = string + " is empty.";
+              } else if (values.size() == 1) {
+                  string = string + " has 1 element: " + System.lineSeparator() + values.get(0);
+              } else {
+                  string = string + " has " + values.size() + " elements:";
+                  for (String value : values) {
+                      string = string + System.lineSeparator() + value;
+                  }
+              }
+              return string;
+  text: |
+    import java.util.ArrayList;
+    import java.util.List;
+
+    public class SimpleCollection {
+        private String name;
+        private List<String> values;
+
+        public SimpleCollection(String name) {
+            this.name = name;
+            values = new ArrayList<>();
+        }
+
+        public void add(String value) {
+            values.add(value);
+        }
+
+        public String toString() {
+            // Add implementation of method here
+        }
+    }
+  learner_created: false
+- name: src/Main.java
+  visible: true
+  text: |
+    public class Main {
+        public static void main(String[] args) {
+            SimpleCollection s = new SimpleCollection("characters");
+            System.out.println(s);
+
+            System.out.println();
+
+            s.add("magneto");
+            System.out.println(s);
+
+            System.out.println();
+
+            s.add("mystique");
+            System.out.println(s);
+
+            System.out.println();
+
+            s.add("phoenix");
+            System.out.println(s);
+        }
+    }
+  learner_created: false
+- name: test/SimpleCollectionTest.java
+  visible: false
+  text: |
+    import org.junit.Assert;
+    import org.junit.Test;
+
+    public class SimpleCollectionTest {
+        @Test
+        public void testConstruction() {
+            SimpleCollection simpleCollection = new SimpleCollection("my collection");
+            Assert.assertEquals("The collection my collection is empty.", simpleCollection.toString());
+        }
+
+        @Test
+        public void testAddition() {
+            SimpleCollection simpleCollection = new SimpleCollection("numbers");
+            simpleCollection.add("one");
+
+            String[] lines = simpleCollection.toString().split(System.lineSeparator());
+            Assert.assertEquals("The collection numbers has 1 element:", lines[0].trim());
+            Assert.assertEquals("one", lines[1].trim());
+
+            simpleCollection.add("two");
+            simpleCollection.add("three");
+            simpleCollection.add("four");
+
+            lines = simpleCollection.toString().split(System.lineSeparator());
+            Assert.assertEquals("The collection numbers has 4 elements:", lines[0].trim());
+            Assert.assertEquals("one", lines[1].trim());
+            Assert.assertEquals("two", lines[2].trim());
+            Assert.assertEquals("three", lines[3].trim());
+            Assert.assertEquals("four", lines[4].trim());
+        }
+    }
+  learner_created: false
+status: Unchecked
+record: -1

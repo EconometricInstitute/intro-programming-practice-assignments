@@ -1,0 +1,42 @@
+type: edu
+files:
+- name: src/Substring.java
+  visible: true
+  placeholders:
+  - offset: 257
+    length: 39
+    placeholder_text: // Write the method implementation here
+    initial_state:
+      length: 39
+      offset: 257
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      if (string.length() > 3) {
+                  return string.substring(0,3);
+              } else {
+                  return string;
+              }
+  text: "public class Substring {\n    public static void main(String[] args) {\n\
+    \        System.out.println(firstPartOfString(\"long\"));\n        System.out.println(firstPartOfString(\"\
+    hi\"));\n    }\n    \n    public static String firstPartOfString(String string)\
+    \ {\n        // Write the method implementation here\n    }\n}\n"
+  learner_created: false
+- name: test/SubstringTest.java
+  visible: false
+  text: |
+    import org.junit.Assert;
+    import org.junit.Test;
+
+    public class SubstringTest {
+        @Test
+        public void testDifferentInputs() {
+            Assert.assertEquals("lon", Substring.firstPartOfString("long string"));
+            Assert.assertEquals("pri", Substring.firstPartOfString("priceless"));
+            Assert.assertEquals("ha", Substring.firstPartOfString("ha"));
+        }
+    }
+  learner_created: false
+status: Unchecked
+record: -1

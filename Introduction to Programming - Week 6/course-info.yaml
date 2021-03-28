@@ -1,0 +1,12 @@
+title: Introduction to Programming - Week 6
+language: English
+summary: Exercises for week 6 of the Introduction to Programming course. Based on
+  the exercises on the course webpage and on the exercises as created by the RAGE
+  group of the university of Helsinki (CC BY-NC-SA).
+programming_language: Java
+content:
+- Objects containing a list
+- Files and reading data
+- Separating the user interface from program logic
+- Using existing classes in Java
+mode: Study

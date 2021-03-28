@@ -1,0 +1,121 @@
+type: edu
+files:
+- name: src/RecordsFromFile.java
+  visible: true
+  placeholders:
+  - offset: 167
+    length: 21
+    placeholder_text: // Add your code here
+    initial_state:
+      length: 21
+      offset: 167
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      Scanner scanner = new Scanner(System.in);
+              System.out.println("Name of the file:");
+              String fileName = scanner.nextLine();
+
+              try (Scanner fileScanner = new Scanner(Paths.get(fileName))) {
+                  while (fileScanner.hasNextLine()) {
+                      String[] parts = fileScanner.nextLine().split(",");
+
+                      if (Integer.parseInt(parts[1]) == 1) {
+                          System.out.println(parts[0] + ", age: " + parts[1] + " year");
+                      } else {
+                          System.out.println(parts[0] + ", age: " + parts[1] + " years");
+                      }
+                  }
+              } catch (IOException e) {
+                  e.printStackTrace();
+              }
+          }
+  text: |
+    import java.io.IOException;
+    import java.nio.file.Paths;
+    import java.util.Scanner;
+
+    public class RecordsFromFile {
+        public static void main(String[] args) {
+            // Add your code here
+    }
+  learner_created: false
+- name: test/RecordsFromFileTest.java
+  visible: false
+  text: |
+    import org.junit.Assert;
+    import org.junit.Before;
+    import org.junit.Test;
+
+    import java.io.ByteArrayInputStream;
+    import java.io.ByteArrayOutputStream;
+    import java.io.InputStream;
+    import java.io.PrintStream;
+
+    public class RecordsFromFileTest {
+        private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+
+        @Before
+        public void setUpStreams() {
+            System.setOut(new PrintStream(outContent));
+        }
+
+        @Test
+        public void testFirstCase() {
+            String input = "recordsData.txt";
+
+            InputStream in = new ByteArrayInputStream(input.getBytes());
+            System.setIn(in);
+
+            RecordsFromFile.main(new String[0]);
+
+            String[] lines = outContent.toString().split(System.lineSeparator());
+
+            Assert.assertEquals(5, lines.length);
+            Assert.assertEquals("Name of the file:", lines[0]);
+            Assert.assertEquals("lily, age: 3 years", lines[1]);
+            Assert.assertEquals("anton, age: 5 years", lines[2]);
+            Assert.assertEquals("levi, age: 4 years", lines[3]);
+            Assert.assertEquals("amy, age: 1 year", lines[4]);
+        }
+
+        @Test
+        public void testSecondCase() {
+            String input = "data2.txt";
+
+            InputStream in = new ByteArrayInputStream(input.getBytes());
+            System.setIn(in);
+
+            RecordsFromFile.main(new String[0]);
+
+            String[] lines = outContent.toString().split(System.lineSeparator());
+
+            Assert.assertEquals(7, lines.length);
+            Assert.assertEquals("Name of the file:", lines[0]);
+            Assert.assertEquals("john, age: 15 years", lines[1]);
+            Assert.assertEquals("jona, age: 1 year", lines[4]);
+            Assert.assertEquals("melissa, age: 4 years",lines[6]);
+        }
+    }
+  learner_created: false
+- name: data2.txt
+  visible: true
+  text: |
+    john,15
+    jane,25
+    dave,3
+    jona,1
+    jason,28
+    melissa,4
+  learner_created: false
+- name: recordsData.txt
+  visible: true
+  text: |
+    lily,3
+    anton,5
+    levi,4
+    amy,1
+  learner_created: false
+status: Unchecked
+record: -1

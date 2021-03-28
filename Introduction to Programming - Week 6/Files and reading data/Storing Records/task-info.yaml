@@ -1,0 +1,59 @@
+type: edu
+files:
+- name: src/Person.java
+  visible: true
+  text: "public class Person {\n    private String name;\n    private int age;\n\n\
+    \    public Person(String name, int age) {\n        this.name = name;\n      \
+    \  this.age = age;\n    }\n    \n    public String getName() {\n        return\
+    \ name;\n    }\n\n    public int getAge() {\n        return age;\n    }\n}\n"
+  learner_created: false
+- name: recordsData.txt
+  visible: true
+  text: |
+    lily,3
+    anton,5
+    levi,4
+    amy,1
+  learner_created: false
+- name: src/StoringRecords.java
+  visible: true
+  placeholders:
+  - offset: 336
+    length: 28
+    placeholder_text: // Implement the method here
+    initial_state:
+      length: 28
+      offset: 336
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: "List<Person> persons = new ArrayList<>();\n      \
+      \  try (Scanner scanner = new Scanner(Paths.get(file))) {\n            while\
+      \ (scanner.hasNextLine()) {\n                String[] parts = scanner.nextLine().split(\"\
+      ,\");\n                \n                String name = parts[0];\n         \
+      \       int age = Integer.parseInt(parts[1]);\n                \n          \
+      \      persons.add(new Person(name, age));\n            }\n        } catch (IOException\
+      \ e) {\n            e.printStackTrace();\n        }\n        return persons;"
+  text: "import java.io.IOException;\nimport java.nio.file.Paths;\nimport java.util.ArrayList;\n\
+    import java.util.List;\nimport java.util.Scanner;\n\npublic class StoringRecords\
+    \ {\n\n    public static void main(String[] args) {\n        readRecordsFromFile(\"\
+    data.txt\");\n    }\n    \n    public static List<Person> readRecordsFromFile(String\
+    \ file) {\n        // Implement the method here\n    }\n}\n"
+  learner_created: false
+- name: test/StoringRecordsTest.java
+  visible: false
+  text: "import org.junit.Assert;\nimport org.junit.Test;\n\nimport java.util.List;\n\
+    \npublic class StoringRecordsTest {\n    @Test\n    public void testCase1() {\n\
+    \        List<Person> personList = StoringRecords.readRecordsFromFile(\"recordsData.txt\"\
+    );\n        \n        Assert.assertEquals(4, personList.size());\n        Assert.assertEquals(\"\
+    lily\", personList.get(0).getName());\n        Assert.assertEquals(3, personList.get(0).getAge());\n\
+    \        Assert.assertEquals(\"amy\", personList.get(3).getName());\n        Assert.assertEquals(1,\
+    \ personList.get(3).getAge());\n    }\n\n    @Test\n    public void testCase2()\
+    \ {\n        List<Person> personList = StoringRecords.readRecordsFromFile(\"data2.txt\"\
+    );\n\n        Assert.assertEquals(6, personList.size());\n        Assert.assertEquals(\"\
+    john\", personList.get(0).getName());\n        Assert.assertEquals(15, personList.get(0).getAge());\n\
+    \        Assert.assertEquals(\"melissa\", personList.get(5).getName());\n    \
+    \    Assert.assertEquals(4, personList.get(5).getAge());\n    }\n}\n"
+  learner_created: false
+status: Unchecked
+record: -1
