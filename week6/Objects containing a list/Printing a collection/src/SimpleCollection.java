@@ -19,11 +19,11 @@ public class SimpleCollection {
         if (values.isEmpty()) {
             string = string + " is empty.";
         } else if (values.size() == 1) {
-            string = string + " has 1 element: \n" + values.get(0);
+            string = string + " has 1 element: " + System.lineSeparator() + values.get(0);
         } else {
             string = string + " has " + values.size() + " elements:";
             for (String value : values) {
-                string = string + "\n" + value;
+                string = string + System.lineSeparator() + value;
             }
         }
         return string;
