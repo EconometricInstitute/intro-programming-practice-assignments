@@ -9,6 +9,6 @@ files:
 - name: test/RecordsFromFileTest.java
   visible: false
 - name: data2.txt
-  visible: false
+  visible: true
 - name: recordsData.txt
   visible: true
