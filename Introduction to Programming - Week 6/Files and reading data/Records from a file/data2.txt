@@ -1,6 +1,0 @@
-john,15
-jane,25
-dave,3
-jona,1
-jason,28
-melissa,4
