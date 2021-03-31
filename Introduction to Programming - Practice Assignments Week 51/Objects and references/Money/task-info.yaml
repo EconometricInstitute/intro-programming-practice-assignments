@@ -1,0 +1,105 @@
+type: edu
+files:
+- name: src/Money.java
+  visible: true
+  placeholders:
+  - offset: 292
+    length: 23
+    placeholder_text: // Add the methods here
+    initial_state:
+      length: 23
+      offset: 292
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: "    public Money plus(Money addition) {\n        int\
+      \ newEuros = this.euros + addition.euros;\n        int newCents = this.cents\
+      \ + addition.cents;\n        if (newCents >= 100) {\n            newEuros++;\n\
+      \            newCents = newCents - 100;\n        }\n\n        return new Money(newEuros,\
+      \ newCents);\n    }\n\n    public boolean lessThan(Money compared) {\n     \
+      \   if (this.euros < compared.euros) {\n            return true;\n        }\
+      \ else if (this.euros == compared.euros) {\n            if (this.cents <= compared.cents)\
+      \ {\n                return true;\n            } else {\n                return\
+      \ false;\n            }\n        } else {\n            return false;\n     \
+      \   }\n    }\n\n    public Money minus(Money decreaser) {\n        int newEuros\
+      \ = this.euros - decreaser.euros;\n        int newCents = this.cents - decreaser.cents;\n\
+      \        if (newCents < 0) {\n            newEuros--;\n            newCents\
+      \ = newCents + 100;\n        }\n        \n        if (newEuros < 0) {\n    \
+      \        newEuros = 0;\n            newCents = 0;\n        }\n\n        Money\
+      \ newMoney = new Money(newEuros, newCents);\n\n        // return the new Money\
+      \ object\n        return newMoney;\n    }"
+  text: |
+    public class Money {
+        private final int euros;
+        private final int cents;
+
+        public Money(int euros, int cents) {
+            this.euros = euros;
+            this.cents = cents;
+        }
+
+        public int euros() {
+            return euros;
+        }
+
+        public int cents() {
+            return cents;
+        }
+
+    // Add the methods here
+
+        public String toString() {
+            String zero = "";
+            if (cents <= 10) {
+                zero = "0";
+            }
+
+            return euros + "." + zero + cents + "e";
+        }
+    }
+  learner_created: false
+- name: test/MoneyTest.java
+  visible: false
+  text: "import org.junit.Assert;\nimport org.junit.Test;\n\npublic class MoneyTest\
+    \ {\n    @Test\n    public void testConstructor() {\n        Money money = new\
+    \ Money(10, 5);\n\n        Assert.assertEquals(\"10.05e\", money.toString());\n\
+    \    }\n\n    @Test\n    public void testAddition() {\n        Money a = new Money(10,\
+    \ 0);\n        Money b = new Money(5, 0);\n\n        Money c = a.plus(b);\n  \
+    \  \n        Assert.assertEquals(15, c.euros());\n        Assert.assertEquals(0,\
+    \ c.cents());\n        \n        a = new Money(10, 50);\n        b = new Money(0,\
+    \ 50);\n        c = new Money(2, 60);\n        \n        Money d = a.plus(b);\n\
+    \        \n        Assert.assertEquals(11, d.euros());\n        Assert.assertEquals(0,\
+    \ d.cents());\n\n        Money e = a.plus(c);\n        Assert.assertEquals(13,\
+    \ e.euros());\n        Assert.assertEquals(10, e.cents());\n    }\n\n    @Test\n\
+    \    public void testComparison() {\n        Money money = new Money(10, 20);\n\
+    \        Money otherMoney = new Money(11, 50);\n        \n        Assert.assertTrue(money.lessThan(otherMoney));\n\
+    \        Assert.assertFalse(otherMoney.lessThan(money));\n        \n        Money\
+    \ thirdMoney = new Money(6, 50);\n        \n        Assert.assertTrue(thirdMoney.lessThan(money));\n\
+    \    }\n    \n    @Test\n    public void testMinus() {\n        Money a = new\
+    \ Money(10, 0);\n        Money b = new Money(3, 50);\n\n        Money c = a.minus(b);\n\
+    \        \n        Assert.assertEquals(6, c.euros());\n        Assert.assertEquals(50,\
+    \ c.cents());\n        \n        c = c.minus(a);\n\n        Assert.assertEquals(0,\
+    \ c.euros());\n        Assert.assertEquals(0, c.cents());\n    }\n}\n"
+  learner_created: false
+- name: src/MainProgram.java
+  visible: true
+  placeholders:
+  - offset: 80
+    length: 30
+    placeholder_text: // You can test your code here
+    initial_state:
+      length: 30
+      offset: 80
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: // Test your code here
+  text: |
+    public class MainProgram {
+        public static void main(String[] args) {
+            // You can test your code here
+        }
+    }
+  learner_created: false
+status: Unchecked
+record: -1

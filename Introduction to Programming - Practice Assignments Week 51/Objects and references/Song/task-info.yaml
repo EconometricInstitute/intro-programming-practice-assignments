@@ -1,0 +1,83 @@
+type: edu
+files:
+- name: src/Song.java
+  visible: true
+  placeholders:
+  - offset: 464
+    length: 29
+    placeholder_text: // Add the equals method here
+    initial_state:
+      length: 29
+      offset: 464
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: "@Override\n    public boolean equals(Object compared)\
+      \ {\n        if (this == compared) {\n            return true;\n        }\n\
+      \        \n        if (!(compared instanceof Song)) {\n            return false;\n\
+      \        }\n        \n        Song otherSong = (Song) compared;\n        \n\
+      \        if (this.title.equals(otherSong.title) && this.author.equals(otherSong.author)\
+      \ && this.length == otherSong.length) {\n            return true;\n        }\n\
+      \        \n        return false;\n    }"
+  text: |
+    import java.util.Objects;
+
+    public class Song {
+        private String title;
+        private String author;
+        private int length;
+
+        public Song(String title, String author, int length) {
+            this.title = title;
+            this.author = author;
+            this.length = length;
+        }
+
+        public String getTitle() {
+            return title;
+        }
+
+        public String getAuthor() {
+            return author;
+        }
+
+        public int getLength() {
+            return length;
+        }
+
+        // Add the equals method here
+    }
+  learner_created: false
+- name: test/SongTest.java
+  visible: false
+  text: "import org.junit.Assert;\nimport org.junit.Test;\n\npublic class SongTest\
+    \ {\n    @Test\n    public void testConstructor() {\n        Song song = new Song(\"\
+    The Lonely Island\", \"Jack Sparrow\", 19);\n    }\n\n    @Test\n    public void\
+    \ testEquals() {\n        Song jackSparrow = new Song(\"The Lonely Island\", \"\
+    Jack Sparrow\", 196);\n        Song anotherSparrow = new Song(\"The Lonely Island\"\
+    , \"Jack Sparrow\", 196);\n        Song otherSong = new Song(\"Bohemian Rhapsody\"\
+    , \"Queen\", 112);\n        \n        Assert.assertEquals(jackSparrow,jackSparrow);\n\
+    \        Assert.assertEquals(jackSparrow, anotherSparrow);\n        Assert.assertEquals(anotherSparrow,\
+    \ anotherSparrow);\n        Assert.assertNotEquals(jackSparrow, otherSong);\n\
+    \    }\n}\n"
+  learner_created: false
+- name: src/MainProgram.java
+  visible: true
+  text: |
+    public class MainProgram {
+        public static void main(String[] args) {
+            Song jackSparrow = new Song("The Lonely Island", "Jack Sparrow", 196);
+            Song anotherSparrow = new Song("The Lonely Island", "Jack Sparrow", 196);
+
+            if (jackSparrow.equals(anotherSparrow)) {
+                System.out.println("Songs are equal.");
+            }
+
+            if (jackSparrow.equals("Another object")) {
+                System.out.println("Strange things are afoot.");
+            }
+        }
+    }
+  learner_created: false
+status: Unchecked
+record: -1

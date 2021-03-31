@@ -1,0 +1,131 @@
+type: edu
+files:
+- name: src/Statistics.java
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 23
+    placeholder_text: // Write the class here
+    initial_state:
+      length: 23
+      offset: 0
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      public class Statistics {
+          private int count;
+          private int sum;
+
+          public Statistics() {
+              count = 0;
+          }
+
+          public void addNumber(int number) {
+              count++;
+              sum = sum + number;
+          }
+
+          public int getCount() {
+              return count;
+          }
+
+          public int sum() {
+              return sum;
+          }
+
+          public double average() {
+              double average = 0;
+              if (count == 0) {
+                  average = 0;
+              } else {
+                  average = 1.0 * sum / count;
+              }
+              return average;
+          }
+      }
+  text: |
+    // Write the class here
+  learner_created: false
+- name: src/Main.java
+  visible: true
+  placeholders:
+  - offset: 100
+    length: 29
+    placeholder_text: // Write code for part 3 here
+    initial_state:
+      length: 29
+      offset: 100
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: "System.out.println(\"Enter numbers:\");\n\n      \
+      \  Statistics statistics = new Statistics();\n        \n        Scanner scanner\
+      \ = new Scanner(System.in);\n        while (true) {\n            int number\
+      \ = scanner.nextInt();\n            if (number == -1) {\n                break;\n\
+      \            }\n            statistics.addNumber(number);\n        }\n\n   \
+      \     System.out.println(\"Sum: \" + statistics.sum());"
+  text: "import java.util.Scanner;\n\npublic class Main {\n    public static void\
+    \ main(String[] args) {\n        // Write code for part 3 here\n    }\n}\n \n"
+  learner_created: false
+- name: test/StatisticsTest.java
+  visible: false
+  text: |
+    import org.junit.Assert;
+    import org.junit.Test;
+
+    public class StatisticsTest {
+
+        @Test
+        public void testCount() {
+            Statistics statistics = new Statistics();
+
+            Assert.assertEquals(0, statistics.getCount());
+
+            statistics.addNumber(1);
+
+            Assert.assertEquals(1, statistics.getCount());
+
+            statistics.addNumber(8);
+            statistics.addNumber(10);
+
+            Assert.assertEquals(3, statistics.getCount());
+
+            statistics.addNumber(15);
+            statistics.addNumber(151);
+            statistics.addNumber(1);
+
+            Assert.assertEquals(6, statistics.getCount());
+        }
+
+        @Test
+        public void testSum() {
+            Statistics statistics = new Statistics();
+            Assert.assertEquals(0, statistics.sum());
+
+            statistics.addNumber(10);
+            Assert.assertEquals(10, statistics.sum());
+
+            statistics.addNumber(5);
+            statistics.addNumber(12);
+            statistics.addNumber(2);
+            Assert.assertEquals(29, statistics.sum());
+        }
+
+        @Test
+        public void testAverage() {
+            Statistics statistics = new Statistics();
+            Assert.assertEquals("Problem with computing average for empty object", 0, statistics.average(), 0.01);
+
+            statistics.addNumber(10);
+            Assert.assertEquals(10, statistics.average(), 0.01);
+
+            statistics.addNumber(5);
+            statistics.addNumber(12);
+            statistics.addNumber(2);
+            Assert.assertEquals(29.0 / 4, statistics.average(), 0.01);
+        }
+    }
+  learner_created: false
+status: Unchecked
+record: -1

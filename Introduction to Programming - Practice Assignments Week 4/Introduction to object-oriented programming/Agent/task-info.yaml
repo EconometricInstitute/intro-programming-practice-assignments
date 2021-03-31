@@ -1,0 +1,77 @@
+type: edu
+files:
+- name: src/Agent.java
+  visible: true
+  placeholders:
+  - offset: 421
+    length: 24
+    placeholder_text: // Write the method here
+    initial_state:
+      length: 24
+      offset: 421
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |2-
+       @Override
+          public String toString() {
+              return "My name is " + lastName + ", " + firstName + " " + lastName;
+          }
+  text: |
+    public class Agent {
+
+        private final String firstName;
+        private final String lastName;
+
+        public Agent(String initialFirstName, String initialLastName) {
+            this.firstName = initialFirstName;
+            this.lastName = initialLastName;
+        }
+
+        /**
+         * Delete this method
+         */
+        public void print() {
+            System.out.println("My name is " + lastName + ", " + firstName + " " + lastName);
+        }
+
+       // Write the method here
+    }
+  learner_created: false
+- name: src/Main.java
+  visible: true
+  text: |
+    public class Main {
+        public static void main(String[] args) {
+            Agent bond = new Agent("James", "Bond");
+
+            bond.toString(); // prints nothing
+            System.out.println(bond);
+
+            Agent ionic = new Agent("Ionic", "Bond");
+            System.out.println(ionic);
+        }
+    }
+  learner_created: false
+- name: test/AgentTest.java
+  visible: false
+  text: |
+    import org.junit.Assert;
+    import org.junit.Test;
+
+    public class AgentTest {
+      @Test
+      public void testAgent() {
+         Agent bond = new Agent("James", "Bond");
+         Assert.assertEquals("My name is Bond, James Bond", bond.toString());
+
+        Agent ionic = new Agent("Ionic", "Bond");
+        Assert.assertEquals("My name is Bond, Ionic Bond", ionic.toString());
+
+        Agent spiderman = new Agent("Spiderman", "Bond");
+        Assert.assertEquals("My name is Bond, Spiderman Bond", spiderman.toString());
+      }
+    }
+  learner_created: false
+status: Unchecked
+record: -1

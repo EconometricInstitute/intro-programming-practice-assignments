@@ -1,0 +1,49 @@
+type: edu
+files:
+- name: src/NeatPrinting.java
+  visible: true
+  placeholders:
+  - offset: 205
+    length: 23
+    placeholder_text: // Write your code here
+    initial_state:
+      length: 23
+      offset: 205
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      for (int i = 0; i < array.length - 1; i++) {
+                  System.out.print(array[i] + ", ");
+              }
+              System.out.print(array[array.length - 1]);
+  text: |
+    public class NeatPrinting {
+        public static void main(String[] args) {
+            int[] array = {5, 1, 3, 4, 2};
+            printNeatly(array);
+        }
+
+        public static void printNeatly(int[] array) {
+            // Write your code here
+        }
+    }
+  learner_created: false
+- name: test/NeatPrintingTest.java
+  visible: false
+  text: "import org.junit.Assert;\nimport org.junit.Before;\nimport org.junit.Test;\n\
+    \nimport java.io.ByteArrayOutputStream;\nimport java.io.PrintStream;\n\npublic\
+    \ class NeatPrintingTest {\n\n    private final ByteArrayOutputStream outContent\
+    \ = new ByteArrayOutputStream();\n\n    @Before\n    public void setUpStreams()\
+    \ {\n        System.setOut(new PrintStream(outContent));\n    }\n\n    @Test\n\
+    \    public void testCase1() {\n        int[] numbers = {5, 1, 3, 4, 2};\n   \
+    \     NeatPrinting.printNeatly(numbers);\n        Assert.assertEquals(\"5, 1,\
+    \ 3, 4, 2\", outContent.toString().trim());\n    }\n\n    @Test\n    public void\
+    \ testCase2() {\n        int[] numbers = {8, 5, 12, 1, 2};\n        NeatPrinting.printNeatly(numbers);\n\
+    \        Assert.assertEquals(\"8, 5, 12, 1, 2\", outContent.toString().trim());\n\
+    \    }\n    \n    @Test\n    public void testCase3() {\n        int[] numbers\
+    \ = {-1, 2, 6, 8, 10};\n        NeatPrinting.printNeatly(numbers);\n        Assert.assertEquals(\"\
+    -1, 2, 6, 8, 10\", outContent.toString().trim());\n    }\n}\n"
+  learner_created: false
+status: Unchecked
+record: -1

@@ -1,0 +1,109 @@
+type: edu
+files:
+- name: src/ClockHand.java
+  visible: true
+  text: |
+    public class ClockHand {
+        private int value;
+        private int limit;
+
+        public ClockHand(int limit) {
+            this.limit = limit;
+            this.value = 0;
+        }
+
+        public void advance() {
+            this.value = this.value + 1;
+
+            if (this.value >= this.limit) {
+                this.value = 0;
+            }
+        }
+
+        public int value() {
+            return this.value;
+        }
+
+        public String toString() {
+            if (this.value < 10) {
+                return "0" + this.value;
+            }
+
+            return "" + this.value;
+        }
+    }
+  learner_created: false
+- name: src/Timer.java
+  visible: true
+  placeholders:
+  - offset: 21
+    length: 32
+    placeholder_text: // Implement your own class here
+    initial_state:
+      length: 32
+      offset: 21
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |2-
+          private ClockHand hundredsClock;
+          private ClockHand secondsClock;
+
+          public Timer() {
+              this.hundredsClock = new ClockHand(100);
+              this.secondsClock = new ClockHand(60);
+          }
+
+          public void advance() {
+              if (this.hundredsClock.value() == 99) {
+                  this.secondsClock.advance();
+              }
+              this.hundredsClock.advance();
+          }
+
+          public String toString() {
+              return this.secondsClock.value() + ":" + this.hundredsClock.value();
+          }
+  text: |
+    public class Timer {
+    // Implement your own class here
+    }
+  learner_created: false
+- name: test/TimerTest.java
+  visible: false
+  text: "import org.junit.Assert;\nimport org.junit.Test;\n\nimport java.sql.Time;\n\
+    \npublic class TimerTest {\n\n    @Test\n    public void testConstructor() {\n\
+    \        Timer timer = new Timer();\n\n        Assert.assertEquals(\"0:0\", timer.toString());\n\
+    \    }\n\n    @Test\n    public void testAdvance() {\n        Timer timer = new\
+    \ Timer();\n\n        timer.advance();\n        Assert.assertEquals(\"0:1\", timer.toString());\n\
+    \n        timer.advance();\n        Assert.assertEquals(\"0:2\", timer.toString());\n\
+    \    }\n    \n    @Test\n    public void testHundredsWrapping() {\n        Timer\
+    \ timer = new Timer();\n        \n        for (int i = 0; i < 100; i++) {\n  \
+    \          timer.advance();\n        }\n        \n        Assert.assertEquals(\"\
+    1:0\", timer.toString());\n    }\n    \n    @Test\n    public void testSecondsWrapping()\
+    \ {\n        Timer timer = new Timer();\n        \n        for (int i = 0; i <\
+    \ 60*100; i++) {\n            timer.advance();\n        }\n        \n        Assert.assertEquals(\"\
+    0:0\", timer.toString());\n    }\n}\n"
+  learner_created: false
+- name: src/MainProgram.java
+  visible: true
+  text: |
+    public class MainProgram {
+        public static void main(String[] args) {
+            Timer timer = new Timer();
+
+            while (true) {
+                System.out.println(timer);
+                timer.advance();
+
+                try {
+                    Thread.sleep(10);
+                } catch (Exception e) {
+
+                }
+            }
+        }
+    }
+  learner_created: false
+status: Unchecked
+record: -1

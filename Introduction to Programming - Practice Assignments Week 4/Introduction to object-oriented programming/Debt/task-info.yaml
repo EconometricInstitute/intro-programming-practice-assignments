@@ -1,0 +1,84 @@
+type: edu
+files:
+- name: src/Debt.java
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 24
+    placeholder_text: // Write your class here
+    initial_state:
+      length: 24
+      offset: 0
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: "public class Debt {\n    private double balance;\n\
+      \    private double interestRate;\n\n    public Debt(double initialBalance,\
+      \ double initialInterestRate) {\n        this.balance = initialBalance;\n  \
+      \      this.interestRate = initialInterestRate;\n    }\n    \n    public void\
+      \ printBalance() {\n        System.out.println(balance);\n    }\n    \n    public\
+      \ void waitOneYear() {\n        balance = balance * interestRate;\n    }\n}"
+  text: |
+    // Write your class here
+  learner_created: false
+- name: test/DebtTest.java
+  visible: false
+  text: "import org.junit.Assert;\nimport org.junit.Before;\nimport org.junit.Test;\n\
+    \nimport java.io.ByteArrayOutputStream;\nimport java.io.PrintStream;\n\npublic\
+    \ class DebtTest {\n    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();\n\
+    \n    @Before\n    public void setUpStreams() {\n        System.setOut(new PrintStream(outContent));\n\
+    \    }\n\n    @Test\n    public void testCase1() {\n        Debt debt = new Debt(120000.0,\
+    \ 1.01);\n        debt.printBalance();\n\n        debt.waitOneYear();\n      \
+    \  debt.printBalance();\n\n        int years = 0;\n        while (years < 20)\
+    \ {\n            debt.waitOneYear();\n            years = years + 1;\n       \
+    \ }\n\n        debt.printBalance();\n\n        String[] lines = outContent.toString().split(System.lineSeparator());\n\
+    \n        Assert.assertEquals(3, lines.length);\n\n        Assert.assertEquals(120000,\
+    \ Double.parseDouble(lines[0].trim()), 0.01);\n        Assert.assertEquals(121200.0,\
+    \ Double.parseDouble(lines[1].trim()), 0.01);\n        Assert.assertEquals(147887.0328416936,\
+    \ Double.parseDouble(lines[2].trim()), 0.01);\n    }\n\n    @Test\n    public\
+    \ void testCase2() {\n        Debt debt = new Debt(1000.50, 1.01);\n\n       \
+    \ debt.printBalance();\n        debt.waitOneYear();\n        debt.printBalance();\n\
+    \        debt.waitOneYear();\n        debt.printBalance();\n        debt.waitOneYear();\n\
+    \        debt.printBalance();\n        debt.waitOneYear();\n        debt.printBalance();\n\
+    \n        String[] lines = outContent.toString().split(System.lineSeparator());\n\
+    \n        Assert.assertEquals(1000.50, Double.parseDouble(lines[0].trim()), 0.01);\n\
+    \        Assert.assertEquals(1000.50 * 1.01, Double.parseDouble(lines[1].trim()),\
+    \ 0.01);\n        Assert.assertEquals(1000.50 * Math.pow(1.01, 2), Double.parseDouble(lines[2].trim()),\
+    \ 0.01);\n        Assert.assertEquals(1000.50 * Math.pow(1.01, 3), Double.parseDouble(lines[3].trim()),\
+    \ 0.01);\n        Assert.assertEquals(1000.50 * Math.pow(1.01, 4), Double.parseDouble(lines[4].trim()),\
+    \ 0.01);\n    }\n    \n    @Test\n    public void testCase3() {\n        Debt\
+    \ debt = new Debt(1000, 1);\n\n        debt.printBalance();\n        debt.waitOneYear();\n\
+    \        debt.printBalance();\n        debt.waitOneYear();\n        debt.printBalance();\n\
+    \        debt.waitOneYear();\n        debt.printBalance();\n        debt.waitOneYear();\n\
+    \        debt.printBalance();\n        String[] lines = outContent.toString().split(System.lineSeparator());\n\
+    \n        Assert.assertEquals(1000, Double.parseDouble(lines[0].trim()), 0.01);\n\
+    \        Assert.assertEquals(1000, Double.parseDouble(lines[1].trim()), 0.01);\n\
+    \        Assert.assertEquals(1000, Double.parseDouble(lines[2].trim()), 0.01);\n\
+    \        Assert.assertEquals(1000, Double.parseDouble(lines[3].trim()), 0.01);\n\
+    \        Assert.assertEquals(1000, Double.parseDouble(lines[4].trim()), 0.01);\n\
+    \    }\n}\n"
+  learner_created: false
+- name: src/Main.java
+  visible: true
+  text: |
+    public class Main {
+        public static void main(String[] args) {
+            Debt mortgage = new Debt(120000.0, 1.01);
+            mortgage.printBalance();
+
+            mortgage.waitOneYear();
+            mortgage.printBalance();
+
+            int years = 0;
+
+            while (years < 20) {
+                mortgage.waitOneYear();
+                years = years + 1;
+            }
+
+            mortgage.printBalance();
+        }
+    }
+  learner_created: false
+status: Unchecked
+record: -1

@@ -1,0 +1,85 @@
+type: edu
+files:
+- name: src/Book.java
+  visible: true
+  placeholders:
+  - offset: 20
+    length: 32
+    placeholder_text: // Add class implementation here
+    initial_state:
+      length: 32
+      offset: 20
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |2-
+          private final String author;
+          private final String name;
+          private final int pages;
+
+          public Book(String author, String name, int pages) {
+              this.author = author;
+              this.name = name;
+              this.pages = pages;
+          }
+
+          public String getAuthor() {
+              return this.author;
+          }
+
+          public String getName() {
+              return this.name;
+          }
+
+          public int getPages() {
+              return this.pages;
+          }
+
+          @Override
+          public String toString() {
+              return this.author + ", " + this.name + ", " + this.pages + " pages";
+          }
+  text: |
+    public class Book {
+    // Add class implementation here
+    }
+  learner_created: false
+- name: test/BookTest.java
+  visible: false
+  text: "import org.junit.Assert;\nimport org.junit.Test;\n\npublic class BookTest\
+    \ {\n    @Test\n    public void testToString() {\n        Book book = new Book(\"\
+    J. K. Rowling\", \"Harry Potter and the Sorcerer's Stone\", 223);\n        \n\
+    \        Assert.assertEquals(\"J. K. Rowling, Harry Potter and the Sorcerer's\
+    \ Stone, 223 pages\", book.toString());\n\n        book = new Book(\"George Orwell\"\
+    , \"1984\", 383);\n        Assert.assertEquals(\"George Orwell, 1984, 383 pages\"\
+    , book.toString());\n    }\n    \n    @Test\n    public void testAuthor() {\n\
+    \        Book book = new Book(\"George Orwell\", \"1984\", 383);\n        \n \
+    \       Assert.assertEquals(\"George Orwell\", book.getAuthor());\n    }\n   \
+    \ \n    @Test\n    public void testName() {\n        Book book = new Book(\"George\
+    \ Orwell\", \"1984\", 383);\n\n        Assert.assertEquals(\"1984\", book.getName());\n\
+    \    }\n    \n    @Test\n    public void testPages() {\n        Book book = new\
+    \ Book(\"George Orwell\", \"1984\", 383);\n\n        Assert.assertEquals(383,\
+    \ book.getPages());\n    }\n    \n    \n    \n}\n"
+  learner_created: false
+- name: src/MainProgram.java
+  visible: true
+  placeholders:
+  - offset: 80
+    length: 30
+    placeholder_text: // You can test your code here
+    initial_state:
+      length: 30
+      offset: 80
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: // Test your code here
+  text: |
+    public class MainProgram {
+        public static void main(String[] args) {
+            // You can test your code here
+        }
+    }
+  learner_created: false
+status: Unchecked
+record: -1
