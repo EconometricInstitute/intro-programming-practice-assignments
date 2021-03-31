@@ -4,6 +4,8 @@ files:
   visible: true
 - name: recordsData.txt
   visible: true
+- name: data2.txt
+  visible: true
 - name: src/StoringRecords.java
   visible: true
   placeholders:
