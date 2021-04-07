@@ -17,7 +17,7 @@ You may find the following resources helpful for contributing to the content:
 
 # License
 
-The course material is licensed under a [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en) license.
+These assignments and tests are licensed under a [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en) license and are a derivative of the work found under https://github.com/rage/java-programming by Henrik Nygren and Antti Leinonen.
 
 ## Contributors to this Derivative Work
 
