@@ -2,9 +2,13 @@
 
 This repository contains the practice assignments for the course FEB21011(X)(S) Inleiding Programmeren / Introduction to Programming at the Erasmus University.
 
+The practice assignments are categorized by week > module > practice assignment. Inside the folder for each practice assignment, the solution can be found in the folder 'src'. The tests for the practice assignments are in the folder 'test'. The task.html file contains the exercise text (currently refers to the website). The task-info.yaml file manages the presentation of the exercise in IntelliJ.
+
 ## Contributing to the content
 
-If you spot a mistake, feel free to open an issue in this repository. If you'd help us making the correction, you can open a pull request with your proposed changes. You may find these resources helpful for doing this:
+If you spot a mistake, feel free to open an issue in this repository. If you'd help us making the correction, you can open a pull request with your proposed changes. The questions for the practice assignments are currently integrated in the course website. So, to suggest changes to the questions please [visit the website repository](https://github.com/EconometricInstitute/intro-programming-website). 
+
+You may find the following resources helpful for contributing to the content:
 
 * [About pull requests](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests)
 * [Markdown tutorial](https://commonmark.org/help/tutorial/)
