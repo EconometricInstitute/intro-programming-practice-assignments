@@ -1,4 +1,15 @@
+# Content
+
 This repository contains the practice assignments for the course FEB21011(X)(S) Inleiding Programmeren / Introduction to Programming at the Erasmus University.
+
+## Contributing to the content
+
+If you spot a mistake, feel free to open an issue in this repository. If you'd help us making the correction, you can open a pull request with your proposed changes. You may find these resources helpful for doing this:
+
+* [About pull requests](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests)
+* [Markdown tutorial](https://commonmark.org/help/tutorial/)
+* [Markdown specification](https://spec.commonmark.org/current/)
+
 
 # License
 
