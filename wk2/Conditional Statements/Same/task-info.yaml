@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: src/ComparingStrings.java
+  visible: true
+  placeholders:
+  - offset: 112
+    length: 421
+    placeholder_text: // Write your code here
+- name: test/ComparingStringsTest.java
+  visible: false

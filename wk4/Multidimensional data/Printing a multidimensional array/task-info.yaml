@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: src/MultidimensionalPrinting.java
+  visible: true
+  placeholders:
+  - offset: 353
+    length: 201
+    placeholder_text: // add your code here
+- name: test/MultidimensionalPrintingTest.java
+  visible: false

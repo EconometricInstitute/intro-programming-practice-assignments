@@ -1,0 +1,12 @@
+type: edu
+files:
+- name: src/MainProgram.java
+  visible: true
+- name: src/Stack.java
+  visible: true
+  placeholders:
+  - offset: 77
+    length: 455
+    placeholder_text: // Add class implementation here
+- name: test/StackTest.java
+  visible: false

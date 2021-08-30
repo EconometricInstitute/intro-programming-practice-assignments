@@ -1,1 +1,1 @@
-See course website for the exercise description.
+See the course website for the exercise description.

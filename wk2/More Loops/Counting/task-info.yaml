@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: src/Counting.java
+  visible: true
+  placeholders:
+  - offset: 104
+    length: 179
+    placeholder_text: // Write your code here
+- name: test/CountingTest.java
+  visible: false

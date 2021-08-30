@@ -1,0 +1,14 @@
+type: edu
+files:
+- name: src/PrintingFile.java
+  visible: true
+  placeholders:
+  - offset: 164
+    length: 451
+    placeholder_text: // Add your code here
+- name: test/PrintingFileTest.java
+  visible: false
+- name: song.txt
+  visible: true
+- name: data.txt
+  visible: true

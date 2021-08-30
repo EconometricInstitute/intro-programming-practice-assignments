@@ -1,0 +1,12 @@
+type: edu
+files:
+- name: src/Account.java
+  visible: false
+- name: src/Main.java
+  visible: true
+  placeholders:
+  - offset: 73
+    length: 115
+    placeholder_text: // Add your code here
+- name: test/AccountTest.java
+  visible: false

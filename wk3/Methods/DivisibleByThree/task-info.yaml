@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: src/DivisibleByThree.java
+  visible: true
+  placeholders:
+  - offset: 133
+    length: 216
+    placeholder_text: // Add method here
+- name: test/DivisibleByThreeTest.java
+  visible: false

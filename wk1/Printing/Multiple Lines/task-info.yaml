@@ -1,0 +1,10 @@
+type: output
+files:
+- name: test/output.txt
+  visible: false
+- name: src/MultipleLines.java
+  visible: true
+  placeholders:
+  - offset: 80
+    length: 175
+    placeholder_text: // Write your solution here

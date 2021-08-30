@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: src/Inputs.java
+  visible: true
+  placeholders:
+  - offset: 102
+    length: 560
+    placeholder_text: // Write code here
+- name: test/InputsTests.java
+  visible: false

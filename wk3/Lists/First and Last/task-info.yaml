@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: src/FirstAndLast.java
+  visible: true
+  placeholders:
+  - offset: 476
+    length: 90
+    placeholder_text: // Add code here
+- name: test/FirstAndLastTest.java
+  visible: false

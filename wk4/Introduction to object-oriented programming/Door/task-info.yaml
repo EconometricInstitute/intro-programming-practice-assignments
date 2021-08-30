@@ -1,0 +1,16 @@
+type: edu
+files:
+- name: src/Door.java
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 107
+    placeholder_text: // Create the class here
+- name: src/Main.java
+  visible: true
+  placeholders:
+  - offset: 73
+    length: 83
+    placeholder_text: // You can test your class here
+- name: test/DoorTest.java
+  visible: false

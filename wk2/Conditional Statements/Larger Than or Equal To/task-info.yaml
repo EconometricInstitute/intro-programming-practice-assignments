@@ -1,0 +1,11 @@
+type: edu
+custom_name: 'Larger Than or Equal To '
+files:
+- name: src/LargerNumber.java
+  visible: true
+  placeholders:
+  - offset: 108
+    length: 574
+    placeholder_text: // Write your code here
+- name: test/LargerNumberTest.java
+  visible: false

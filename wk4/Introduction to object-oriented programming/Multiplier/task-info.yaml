@@ -1,0 +1,8 @@
+type: edu
+files:
+- name: src/Multiplier.java
+  visible: true
+- name: src/Main.java
+  visible: true
+- name: test/MultiplierTest.java
+  visible: false

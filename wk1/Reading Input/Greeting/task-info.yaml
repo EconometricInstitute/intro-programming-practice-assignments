@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: test/GreetingTest.java
+  visible: false
+- name: src/Greeting.java
+  visible: true
+  placeholders:
+  - offset: 156
+    length: 151
+    placeholder_text: // Write your answer here

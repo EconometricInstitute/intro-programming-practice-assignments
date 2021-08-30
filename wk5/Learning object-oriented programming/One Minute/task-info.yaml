@@ -1,0 +1,14 @@
+type: edu
+files:
+- name: src/ClockHand.java
+  visible: true
+- name: src/Timer.java
+  visible: true
+  placeholders:
+  - offset: 21
+    length: 483
+    placeholder_text: // Implement your own class here
+- name: test/TimerTest.java
+  visible: false
+- name: src/MainProgram.java
+  visible: true

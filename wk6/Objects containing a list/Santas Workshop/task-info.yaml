@@ -1,0 +1,20 @@
+type: edu
+files:
+- name: src/Gift.java
+  visible: true
+  placeholders:
+  - offset: 24
+    length: 364
+    placeholder_text: // Add package implementation here
+- name: src/Package.java
+  visible: true
+  placeholders:
+  - offset: 79
+    length: 340
+    placeholder_text: // Add package implementation here
+- name: src/Main.java
+  visible: true
+- name: test/GiftTest.java
+  visible: false
+- name: test/PackageTest.java
+  visible: false

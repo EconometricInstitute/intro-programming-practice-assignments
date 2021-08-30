@@ -1,0 +1,10 @@
+type: output
+files:
+- name: test/output.txt
+  visible: false
+- name: src/Recipe.java
+  visible: true
+  placeholders:
+  - offset: 73
+    length: 59
+    placeholder_text: // Write your solution here

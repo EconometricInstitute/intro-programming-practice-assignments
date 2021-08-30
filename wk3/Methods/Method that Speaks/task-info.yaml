@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: src/SpeakingMethod.java
+  visible: true
+  placeholders:
+  - offset: 148
+    length: 42
+    placeholder_text: // Write some code in here
+- name: test/SpeakingMethodTest.java
+  visible: false

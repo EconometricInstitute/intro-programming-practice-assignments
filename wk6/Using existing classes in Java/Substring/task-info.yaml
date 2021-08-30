@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: src/Substring.java
+  visible: true
+  placeholders:
+  - offset: 257
+    length: 122
+    placeholder_text: // Write the method implementation here
+- name: test/SubstringTest.java
+  visible: false

@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: src/Seconds.java
+  visible: true
+  placeholders:
+  - offset: 103
+    length: 288
+    placeholder_text: // Write your solution here
+- name: test/SecondsTest.java
+  visible: false

@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: src/SecondPlusThird.java
+  visible: true
+  placeholders:
+  - offset: 451
+    length: 58
+    placeholder_text: System.out.println(numberList.get(0));
+- name: test/SecondPlusThirdTest.java
+  visible: false

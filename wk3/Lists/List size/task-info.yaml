@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: src/ListSize.java
+  visible: true
+  placeholders:
+  - offset: 472
+    length: 48
+    placeholder_text: // Add code here
+- name: test/ListSizeTest.java
+  visible: false

@@ -1,0 +1,14 @@
+type: edu
+files:
+- name: src/Smallest.java
+  visible: true
+  placeholders:
+  - offset: 231
+    length: 123
+    placeholder_text: |-
+      // write your code here
+      // do not print anything inside the method
+
+       // there must be a return command at the end
+- name: test/SmallestTest.java
+  visible: false

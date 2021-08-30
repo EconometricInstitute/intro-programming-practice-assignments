@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: src/SequenceToOne.java
+  visible: true
+  placeholders:
+  - offset: 118
+    length: 196
+    placeholder_text: // Write the method here
+- name: test/SequenceToOneTest.java
+  visible: false

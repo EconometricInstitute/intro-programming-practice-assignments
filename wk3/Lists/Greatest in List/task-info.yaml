@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: src/GreatestElement.java
+  visible: true
+  placeholders:
+  - offset: 478
+    length: 258
+    placeholder_text: // Add code here
+- name: test/GreatestElementTest.java
+  visible: false

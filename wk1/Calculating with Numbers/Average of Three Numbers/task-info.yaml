@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: src/Average.java
+  visible: true
+  placeholders:
+  - offset: 103
+    length: 444
+    placeholder_text: // Write your solution here
+- name: test/AverageTest.java
+  visible: false

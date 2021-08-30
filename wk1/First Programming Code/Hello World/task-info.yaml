@@ -1,0 +1,10 @@
+type: output
+files:
+- name: src/HelloWorld.java
+  visible: true
+  placeholders:
+  - offset: 79
+    length: 35
+    placeholder_text: // Your code comes here
+- name: test/output.txt
+  visible: false

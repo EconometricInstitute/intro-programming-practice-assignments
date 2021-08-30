@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: src/ArrayAverage.java
+  visible: true
+  placeholders:
+  - offset: 227
+    length: 133
+    placeholder_text: // Write your code here
+- name: test/ArrayAverageTest.java
+  visible: false

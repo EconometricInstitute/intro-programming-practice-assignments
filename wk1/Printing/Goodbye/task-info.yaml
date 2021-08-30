@@ -1,0 +1,10 @@
+type: output
+files:
+- name: test/output.txt
+  visible: false
+- name: src/Goodbye.java
+  visible: true
+  placeholders:
+  - offset: 74
+    length: 58
+    placeholder_text: // Answer comes here

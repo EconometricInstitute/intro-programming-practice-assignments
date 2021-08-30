@@ -1,0 +1,15 @@
+type: edu
+files:
+- name: src/Reprint.java
+  visible: true
+  placeholders:
+  - offset: 378
+    length: 42
+    placeholder_text: // write some code in here
+  - offset: 103
+    length: 222
+    placeholder_text: |-
+      // ask the user for the number of times that the phrase will be printed
+       // use the while command to call the method a suitable number of times
+- name: test/ReprintTest.java
+  visible: false

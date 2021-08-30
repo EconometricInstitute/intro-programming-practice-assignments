@@ -1,0 +1,15 @@
+type: edu
+files:
+- name: src/Averaging.java
+  visible: true
+  placeholders:
+  - offset: 172
+    length: 301
+    placeholder_text: // you can copy your implementation of the method sum here
+  - offset: 172
+    length: 301
+    placeholder_text: |-
+      // write your code here
+        // calculate the sum of the elements by calling the method sum
+- name: test/AveragingTest.java
+  visible: false

@@ -1,0 +1,30 @@
+type: edu
+files:
+- name: src/GradeRegister.java
+  visible: true
+  placeholders:
+  - offset: 229
+    length: 32
+    placeholder_text: // Make changes to the constructor here
+  - offset: 378
+    length: 24
+    placeholder_text: // Make changes to the method here
+  - offset: 1113
+    length: 229
+    placeholder_text: // Add method implementation here
+  - offset: 1396
+    length: 229
+    placeholder_text: // Add method implementation here
+  - offset: 120
+    length: 29
+    placeholder_text: // Add new instance variables here
+- name: src/UserInterface.java
+  visible: true
+  placeholders:
+  - offset: 1184
+    length: 168
+    placeholder_text: // Add content to the method here
+- name: test/GradeRegisterTest.java
+  visible: false
+- name: test/UserInterfaceTest.java
+  visible: false

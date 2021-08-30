@@ -1,0 +1,16 @@
+type: edu
+files:
+- name: src/Person.java
+  visible: true
+- name: recordsData.txt
+  visible: true
+- name: data2.txt
+  visible: true
+- name: src/StoringRecords.java
+  visible: true
+  placeholders:
+  - offset: 336
+    length: 507
+    placeholder_text: // Implement the method here
+- name: test/StoringRecordsTest.java
+  visible: false

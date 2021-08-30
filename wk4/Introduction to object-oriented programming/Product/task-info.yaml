@@ -1,0 +1,16 @@
+type: edu
+files:
+- name: src/Product.java
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 427
+    placeholder_text: // Write your class here
+- name: src/Main.java
+  visible: true
+  placeholders:
+  - offset: 73
+    length: 81
+    placeholder_text: // You can test your class here
+- name: test/ProductTest.java
+  visible: false

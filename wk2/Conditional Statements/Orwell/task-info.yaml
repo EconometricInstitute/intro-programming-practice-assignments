@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: src/Orwell.java
+  visible: true
+  placeholders:
+  - offset: 102
+    length: 211
+    placeholder_text: // Write your code here
+- name: test/OrwellTest.java
+  visible: false

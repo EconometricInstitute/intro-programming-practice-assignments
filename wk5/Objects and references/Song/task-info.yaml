@@ -1,0 +1,12 @@
+type: edu
+files:
+- name: src/Song.java
+  visible: true
+  placeholders:
+  - offset: 464
+    length: 466
+    placeholder_text: // Add the equals method here
+- name: test/SongTest.java
+  visible: false
+- name: src/MainProgram.java
+  visible: true

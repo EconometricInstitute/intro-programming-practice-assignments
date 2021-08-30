@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: src/IndexOf.java
+  visible: true
+  placeholders:
+  - offset: 438
+    length: 269
+    placeholder_text: // Add code here
+- name: test/IndexOfTest.java
+  visible: false

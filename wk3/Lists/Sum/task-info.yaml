@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: src/Sum.java
+  visible: true
+  placeholders:
+  - offset: 408
+    length: 172
+    placeholder_text: // Add method here
+- name: test/SumTest.java
+  visible: false

@@ -1,0 +1,16 @@
+type: edu
+files:
+- name: src/Person.java
+  visible: true
+  placeholders:
+  - offset: 233
+    length: 100
+    placeholder_text: |-
+      // Replace the below return statement
+      return name;
+- name: src/Pet.java
+  visible: true
+- name: test/PersonTest.java
+  visible: false
+- name: src/MainProgram.java
+  visible: true

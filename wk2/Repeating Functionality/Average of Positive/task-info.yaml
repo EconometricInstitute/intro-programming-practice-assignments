@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: test/Tests.java
+  visible: false
+- name: src/PositiveAverage.java
+  visible: true
+  placeholders:
+  - offset: 111
+    length: 597
+    placeholder_text: // Write your code here
