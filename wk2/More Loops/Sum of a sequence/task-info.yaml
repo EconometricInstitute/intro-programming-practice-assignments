@@ -1,0 +1,10 @@
+type: output
+files:
+- name: src/SumOfASequence.java
+  visible: true
+  placeholders:
+  - offset: 110
+    length: 394
+    placeholder_text: // Write your code here
+- name: test/SumOfASequenceTest.java
+  visible: false
