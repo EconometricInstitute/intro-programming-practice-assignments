@@ -6,6 +6,7 @@ public class AgeChecking {
 
         System.out.println("How old are you?");
         int age = scanner.nextInt();
+        scanner.close();
         
         if (age >= 0 && age <= 120) {
             System.out.println("OK");

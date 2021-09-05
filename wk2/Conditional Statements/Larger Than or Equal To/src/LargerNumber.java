@@ -8,6 +8,7 @@ public class LargerNumber {
         int firstNumber = scanner.nextInt();
         System.out.println("Give the second number:");
         int secondNumber = scanner.nextInt();
+        scanner.close();
         
         if (firstNumber > secondNumber) {
             System.out.println("Greater number is: " + firstNumber);

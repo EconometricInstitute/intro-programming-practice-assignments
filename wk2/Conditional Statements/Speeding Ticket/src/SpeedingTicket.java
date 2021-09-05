@@ -6,6 +6,7 @@ public class SpeedingTicket {
         
         System.out.println("Give speed:");
         int speed = scanner.nextInt();
+        scanner.close();
         
         if (speed > 120) {
             System.out.println("Speeding ticket!");

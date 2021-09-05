@@ -8,6 +8,7 @@ public class ComparingStrings {
         String firstText = scanner.nextLine();
         System.out.println("Enter the second string:");
         String secondText = scanner.nextLine();
+        scanner.close();
         
         if (firstText.equals(secondText)) {
             System.out.println("Same");

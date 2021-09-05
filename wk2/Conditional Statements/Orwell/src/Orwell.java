@@ -6,7 +6,8 @@ public class Orwell {
 
         System.out.println("Give a number:");
         int number = scanner.nextInt();
-
+        scanner.close();
+        
         if (number == 1984) {
             System.out.println("Orwell");
         }
