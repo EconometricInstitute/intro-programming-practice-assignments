@@ -12,5 +12,6 @@ public class CarryOn {
                 break;
             }
         }
+        scanner.close();    
     }
 }

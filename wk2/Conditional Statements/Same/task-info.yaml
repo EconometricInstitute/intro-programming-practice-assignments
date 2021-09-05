@@ -4,7 +4,7 @@ files:
   visible: true
   placeholders:
   - offset: 112
-    length: 421
+    length: 446
     placeholder_text: // Write your code here
 - name: test/ComparingStringsTest.java
   visible: false

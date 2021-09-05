@@ -19,7 +19,8 @@ public class MultipleSteps {
             sum = sum + number;
             amountOfNumbers++;
         }
-
+        scanner.close();
+        
         System.out.println("Sum: " + sum);
         System.out.println("Numbers: " + amountOfNumbers);
         System.out.println("Average: " + (1.0 * sum) / amountOfNumbers);

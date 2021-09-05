@@ -19,7 +19,8 @@ public class PositiveAverage {
             sumOfNumbers = sumOfNumbers + number;
             amountOfNumbers++;
         }
-
+        scanner.close();
+        
         if (amountOfNumbers == 0) {
             System.out.println("Cannot calculate the average");
         } else {

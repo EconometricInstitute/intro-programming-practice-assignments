@@ -4,7 +4,7 @@ files:
   visible: true
   placeholders:
   - offset: 102
-    length: 560
-    placeholder_text: // Write code here
+    length: 593
+    placeholder_text: // Write your code here
 - name: test/InputsTests.java
   visible: false

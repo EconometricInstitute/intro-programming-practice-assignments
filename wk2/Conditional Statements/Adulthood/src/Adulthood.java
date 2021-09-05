@@ -13,6 +13,5 @@ public class Adulthood {
         } else {
             System.out.println("You are not an adult");
         }
-
     }
 }

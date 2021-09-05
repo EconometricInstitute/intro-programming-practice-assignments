@@ -16,7 +16,8 @@ public class SquaresSum {
             
             sumOfSquares = sumOfSquares + number * number;
         }
-
+        scanner.close();
+        
         System.out.println("Sum of the squares: " + sumOfSquares);
     }
 }

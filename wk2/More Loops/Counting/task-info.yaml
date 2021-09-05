@@ -4,7 +4,7 @@ files:
   visible: true
   placeholders:
   - offset: 104
-    length: 179
+    length: 204
     placeholder_text: // Write your code here
 - name: test/CountingTest.java
   visible: false

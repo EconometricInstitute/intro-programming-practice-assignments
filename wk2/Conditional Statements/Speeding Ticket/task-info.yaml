@@ -4,7 +4,7 @@ files:
   visible: true
   placeholders:
   - offset: 110
-    length: 230
+    length: 255
     placeholder_text: // Write your code here
 - name: test/SpeedingTicketTest.java
   visible: false

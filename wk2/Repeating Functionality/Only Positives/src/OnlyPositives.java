@@ -17,5 +17,6 @@ public class OnlyPositives {
 
             System.out.println(number * number);
         }
+        scanner.close();    
     }
 }

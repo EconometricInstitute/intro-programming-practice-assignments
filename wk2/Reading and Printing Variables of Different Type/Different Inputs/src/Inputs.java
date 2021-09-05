@@ -10,7 +10,8 @@ public class Inputs {
         double firstDouble = scanner.nextDouble();
         System.out.println("Please enter the second double:");
         double secondDouble = scanner.nextDouble();
-        
+        scanner.close();    
+            
         System.out.println("The value of the boolean input: " + booleanValue);
         System.out.println("The sum of the double inputs: " + (firstDouble + secondDouble));
     }

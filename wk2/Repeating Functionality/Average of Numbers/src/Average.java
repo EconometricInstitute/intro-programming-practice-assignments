@@ -18,7 +18,8 @@ public class Average {
             sumOfNumbers = sumOfNumbers + number;
             amountOfNumbers++;
         }
-
+        scanner.close();
+        
         System.out.println("Average of the numbers: " + (1.0 * sumOfNumbers) / amountOfNumbers);
     }
 }

@@ -4,7 +4,7 @@ files:
   visible: true
   placeholders:
   - offset: 106
-    length: 437
+    length: 470
     placeholder_text: // Write your code here
 - name: test/SquaresSumTest.java
   visible: false
