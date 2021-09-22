@@ -2,6 +2,13 @@ type: edu
 files:
 - name: src/Multiplier.java
   visible: true
+  placeholders:
+  - offset: 95
+    length: 21
+    placeholder_text: /* You code here */
+  - offset: 170
+    length: 28
+    placeholder_text: /* Your code here */
 - name: src/Main.java
   visible: true
 - name: test/MultiplierTest.java
